@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BBB</string>
+    <string-array name="lang_arrays">
+        <item>English</item>
+        <item>Hindi</item>
+        <item>Marathi</item>
+        <item>Bengali</item>
+        <item>Tamil</item>
+        <item>Telugu</item>
+    </string-array>
+
+    <string name="title_shop">Shop</string>
+    <string name="title_gifts">Gifts</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_profile">Profile</string>
+</resources>

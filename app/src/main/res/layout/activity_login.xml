@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#142439"
+    android:padding="30dp"
+    tools:context=".Login">
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="258dp"
+        android:inputType="textEmailAddress"
+        android:text="r@email.com"
+        android:textColor="#FDFDFD"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="29dp"
+        android:inputType="textPassword"
+        android:text="password"
+        android:textColor="#FEFEFE"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_marginTop="46dp"
+        android:background="#068F36"
+        android:gravity="center"
+        android:onClick="login"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/new_user"
+        android:layout_width="331dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/submit"
+        android:layout_marginTop="64dp"
+        android:text="New user ? signup"
+        android:textColor="#1AF1F8"
+        android:textSize="18sp" />
+
+</RelativeLayout>

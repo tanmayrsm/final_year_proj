@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".other_lang_ocr"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the lang for ocr:"
+        android:textSize="24sp"
+        android:id="@+id/tp"
+        />
+    <TextView
+        android:background="#d3d3d3 "
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hindi"
+        android:id="@+id/hindi"
+        android:textSize="24sp"/>
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Marathi"
+        android:id="@+id/mar"
+        android:textSize="24sp"/>
+    <TextView
+        android:background="#d3d3d3 "
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bengali"
+        android:id="@+id/ben"
+        android:textSize="24sp"/>
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tamil"
+        android:id="@+id/tam"
+        android:textSize="24sp"/>
+
+
+</LinearLayout>

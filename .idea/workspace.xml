@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4b7d117-37f8-4276-80e4-10777a8ddd05" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/build/classes/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="e07df042" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="309" column="97" selection-start-line="309" selection-start-column="97" selection-end-line="309" selection-end-column="97" />
+              <folding>
+                <element signature="class#4181:6315" />
+                <element signature="class#6360:6557" />
+                <element signature="class#7021:7735" />
+                <element signature="method#onCancelled#0;class#7021:7735" />
+                <element signature="class#7936:8645" />
+                <element signature="class#8764:9288" />
+                <element signature="class#9382:9766" />
+                <element signature="class#9810:9994" />
+                <element signature="e#10044#10045#0" expanded="true" />
+                <element signature="e#10130#10131#0" expanded="true" />
+                <element signature="class#10705:11031" />
+                <element signature="class#12865:13514" />
+                <element signature="method#onCancelled#0;class#12865:13514" />
+                <element signature="class#13715:14349" />
+                <element signature="class#12263:14159" />
+                <element signature="e#10680#10749#0" />
+                <element signature="class#17988:18700" />
+                <element signature="class#18774:19537" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="790" column="25" lean-forward="true" selection-start-line="785" selection-start-column="8" selection-end-line="790" selection-end-column="25" />
+              <folding>
+                <element signature="e#3905#8917#0" />
+                <element signature="e#8923#14827#0" />
+                <element signature="e#14833#17744#0" />
+                <element signature="e#17751#21323#0" />
+                <element signature="e#21504#22341#0" />
+                <element signature="e#22347#27504#0" />
+                <element signature="method#onClick#0;class#25324:25973" />
+                <element signature="class#26079:26648" />
+                <element signature="e#28805#30823#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/ViewProfile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="161" column="29" lean-forward="true" selection-start-line="152" selection-start-column="20" selection-end-line="161" selection-end-column="29" />
+              <folding>
+                <element signature="class#2556:2830" />
+                <element signature="class#2240:2514" />
+                <element signature="class#1938:2655" />
+                <element signature="class#3279:3774" />
+                <element signature="class#5162:5968" />
+                <element signature="method#onCancelled#0;class#5162:5968" />
+                <element signature="class#5890:10899" />
+                <element signature="e#8850#8851#0" expanded="true" />
+                <element signature="e#8922#8923#0" expanded="true" />
+                <element signature="class#7273:8079" />
+                <element signature="class#5144:5553" />
+                <element signature="e#12081#12082#0" expanded="true" />
+                <element signature="class#11050:16207" />
+                <element signature="e#12940#12941#0" expanded="true" />
+                <element signature="e#13004#13005#0" expanded="true" />
+                <element signature="class#12360:13431" />
+                <element signature="method#onCancelled#0;class#12360:13431" />
+                <element signature="class#13590:14520" />
+                <element signature="method#onCancelled#0;class#13590:14520" />
+                <element signature="class#14784:15732" />
+                <element signature="method#onCancelled#0;class#14784:15732" />
+                <element signature="class#15590:16125" />
+                <element signature="method#onCancelled#0;class#15590:16125" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllContacts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="76" column="25" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="76" selection-end-column="25" />
+              <folding>
+                <element signature="e#5924#6523#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="237" column="26" selection-start-line="237" selection-start-column="26" selection-end-line="237" selection-end-column="26" />
+              <folding>
+                <element signature="e#8957#8958#0" expanded="true" />
+                <element signature="e#9003#9004#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="1278" column="50" lean-forward="true" selection-start-line="1278" selection-start-column="50" selection-end-line="1278" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_profile.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="114" column="29" lean-forward="true" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="152" lean-forward="true" selection-start-line="109" selection-start-column="8" selection-end-line="152" />
+              <folding>
+                <element signature="class#2575:3135" />
+                <element signature="class#3268:3857" />
+                <element signature="class#4210:5056" />
+                <element signature="method#onCancelled#0;class#4210:5056" />
+                <element signature="class#5293:6132" />
+                <element signature="e#4082#4083#0" expanded="true" />
+                <element signature="e#4125#4126#0" expanded="true" />
+                <element signature="class#6599:15901" />
+                <element signature="class#5194:13978" />
+                <element signature="class#7126:7635" />
+                <element signature="class#12316:12885" />
+                <element signature="class#14124:14693" />
+                <element signature="class#15001:15570" />
+                <element signature="class#12167:13671" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="190" column="23" selection-start-line="190" selection-start-column="16" selection-end-line="190" selection-end-column="23" />
+              <folding>
+                <element signature="method#onCreate#0;class#AllReceived#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>view pro</find>
+      <find>viewpro</find>
+      <find>firebase</find>
+      <find>firebaseu</find>
+      <find>back</find>
+      <find>list</find>
+      <find>for(</find>
+      <find>firebaseuse</find>
+      <find>call</find>
+      <find>calling.set</find>
+      <find>I am in</find>
+      <find>calluser</find>
+      <find>I am</find>
+      <find>opencallerdialog</find>
+      <find>openCallerDialog</find>
+      <find>menu</find>
+      <find>mainac</find>
+      <find>openca</find>
+      <find>maina</find>
+      <find>exis</find>
+      <find>unblo</find>
+      <find>remove</find>
+      <find>flags</find>
+      <find>recei</find>
+      <find>hash</find>
+      <find>view</find>
+      <find>sette</find>
+      <find>ch_with</find>
+      <find>intent</find>
+      <find>alert</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Emergency.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_emergency.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/Locatioi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/UserStatus.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllprevMessages.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllContacts.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllSent.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/EditProfile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_view_profile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_users.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/ViewProfile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="beproj_feb_rev-master" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="beproj_feb_rev-master" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="beproj_feb_rev-master" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="beproj3" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="beproj_feb_rev-master" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="beproj3" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Adapters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="beproj_feb_rev-master" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="beproj3" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="beproj_feb_rev-master" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="beproj_feb_rev-master" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="beproj_feb_rev-master" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="e07df042" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-03-07T14:42:34.304Z" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="com.example.beproj3" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4b7d117-37f8-4276-80e4-10777a8ddd05" name="Default Changelist" comment="" />
+      <created>1583335795152</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583335795152</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1590604" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Resources Explorer" order="7" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.3286119" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.43767706" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3555241" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.3295302" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2033557" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Build Variants" order="6" side_tool="true" />
+      <window_info id="Resources Explorer" order="7" />
+      <window_info id="Captures" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="0" />
+      <window_info anchor="bottom" id="TODO" order="1" />
+      <window_info anchor="bottom" id="Logcat" order="2" weight="0.65014166" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3555241" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.3295302" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+    </layout-to-restore>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java</url>
+          <line>581</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_call_going.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_allprev_messages.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_emergency.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="81" column="73" selection-start-line="81" selection-start-column="73" selection-end-line="81" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/UserStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/Locatioi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <element signature="e#360#361#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllprevMessages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Emergency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllSent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/EditProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="157" column="8" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllReceivedAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1042">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="class#3336:7807" />
+            <element signature="class#7854:8978" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="190" column="23" selection-start-line="190" selection-start-column="16" selection-end-line="190" selection-end-column="23" />
+          <folding>
+            <element signature="method#onCreate#0;class#AllReceived#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/SentModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="237" column="26" selection-start-line="237" selection-start-column="26" selection-end-line="237" selection-end-column="26" />
+          <folding>
+            <element signature="e#8957#8958#0" expanded="true" />
+            <element signature="e#9003#9004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_profile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="114" column="29" lean-forward="true" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllContacts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="76" column="25" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="76" selection-end-column="25" />
+          <folding>
+            <element signature="e#5924#6523#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_users.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="1278" column="50" lean-forward="true" selection-start-line="1278" selection-start-column="50" selection-end-line="1278" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="152" lean-forward="true" selection-start-line="109" selection-start-column="8" selection-end-line="152" />
+          <folding>
+            <element signature="class#2575:3135" />
+            <element signature="class#3268:3857" />
+            <element signature="class#4210:5056" />
+            <element signature="method#onCancelled#0;class#4210:5056" />
+            <element signature="class#5293:6132" />
+            <element signature="e#4082#4083#0" expanded="true" />
+            <element signature="e#4125#4126#0" expanded="true" />
+            <element signature="class#6599:15901" />
+            <element signature="class#5194:13978" />
+            <element signature="class#7126:7635" />
+            <element signature="class#12316:12885" />
+            <element signature="class#14124:14693" />
+            <element signature="class#15001:15570" />
+            <element signature="class#12167:13671" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="790" column="25" lean-forward="true" selection-start-line="785" selection-start-column="8" selection-end-line="790" selection-end-column="25" />
+          <folding>
+            <element signature="e#3905#8917#0" />
+            <element signature="e#8923#14827#0" />
+            <element signature="e#14833#17744#0" />
+            <element signature="e#17751#21323#0" />
+            <element signature="e#21504#22341#0" />
+            <element signature="e#22347#27504#0" />
+            <element signature="method#onClick#0;class#25324:25973" />
+            <element signature="class#26079:26648" />
+            <element signature="e#28805#30823#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/ViewProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="161" column="29" lean-forward="true" selection-start-line="152" selection-start-column="20" selection-end-line="161" selection-end-column="29" />
+          <folding>
+            <element signature="class#2556:2830" />
+            <element signature="class#2240:2514" />
+            <element signature="class#1938:2655" />
+            <element signature="class#3279:3774" />
+            <element signature="class#5162:5968" />
+            <element signature="method#onCancelled#0;class#5162:5968" />
+            <element signature="class#5890:10899" />
+            <element signature="e#8850#8851#0" expanded="true" />
+            <element signature="e#8922#8923#0" expanded="true" />
+            <element signature="class#7273:8079" />
+            <element signature="class#5144:5553" />
+            <element signature="e#12081#12082#0" expanded="true" />
+            <element signature="class#11050:16207" />
+            <element signature="e#12940#12941#0" expanded="true" />
+            <element signature="e#13004#13005#0" expanded="true" />
+            <element signature="class#12360:13431" />
+            <element signature="method#onCancelled#0;class#12360:13431" />
+            <element signature="class#13590:14520" />
+            <element signature="method#onCancelled#0;class#13590:14520" />
+            <element signature="class#14784:15732" />
+            <element signature="method#onCancelled#0;class#14784:15732" />
+            <element signature="class#15590:16125" />
+            <element signature="method#onCancelled#0;class#15590:16125" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="309" column="97" selection-start-line="309" selection-start-column="97" selection-end-line="309" selection-end-column="97" />
+          <folding>
+            <element signature="class#4181:6315" />
+            <element signature="class#6360:6557" />
+            <element signature="class#7021:7735" />
+            <element signature="method#onCancelled#0;class#7021:7735" />
+            <element signature="class#7936:8645" />
+            <element signature="class#8764:9288" />
+            <element signature="class#9382:9766" />
+            <element signature="class#9810:9994" />
+            <element signature="e#10044#10045#0" expanded="true" />
+            <element signature="e#10130#10131#0" expanded="true" />
+            <element signature="class#10705:11031" />
+            <element signature="class#12865:13514" />
+            <element signature="method#onCancelled#0;class#12865:13514" />
+            <element signature="class#13715:14349" />
+            <element signature="class#12263:14159" />
+            <element signature="e#10680#10749#0" />
+            <element signature="class#17988:18700" />
+            <element signature="class#18774:19537" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+  </component>
+</project>

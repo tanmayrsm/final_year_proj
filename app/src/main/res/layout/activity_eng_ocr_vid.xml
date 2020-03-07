@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".eng_ocr_vid"
+    android:padding="10dp"
+    >
+
+
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/surf_view"
+        android:padding="5dp"/>
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/see_native_text2"
+        android:text="See native text"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        />
+
+    <com.example.beproj3.GraphicOverlay
+        android:id="@+id/graphic_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintTop_toTopOf="@id/surf_view"
+        app:layout_constraintBottom_toBottomOf="@id/surf_view"
+        app:layout_constraintLeft_toLeftOf="@id/surf_view"
+        app:layout_constraintRight_toRightOf="@id/surf_view"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/graphic_overlay"
+        android:text="clear screen"
+        android:id="@+id/clear_screen"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/clear_screen">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/display2"
+            android:scrollbars="vertical"
+            android:text="Detected Text"
+            />
+
+    </ScrollView>
+
+</RelativeLayout>

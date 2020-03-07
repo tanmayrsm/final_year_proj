@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllprevMessages"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_in_allprev_messages"
+        android:text="username"
+        android:padding="10dp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llo"
+        android:layout_below="@+id/username_in_allprev_messages">
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchMinWidth="56dp"
+        android:layout_marginTop="1dp"
+        android:text="Switch Language  "
+        android:checked="false"
+        android:textOff="OFF"
+        android:textOn="ON"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView46"
+        android:layout_marginBottom="100dp"
+        android:layout_below="@+id/llo"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/native_recyclerview12"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_below="@+id/llo"/>
+
+</RelativeLayout>

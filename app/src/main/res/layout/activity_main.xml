@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#218411"
+        android:padding="10dp"
+        android:text="Username"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_history_"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="60dp"
+        android:padding="10dp"
+        android:id="@+id/call_history"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_notifications_"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="25dp"
+        android:padding="10dp"
+        android:id="@+id/notification_bell"/>
+
+    <Button
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:text="0"
+        android:textSize="12sp"
+        android:id="@+id/notts_no"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="3dp"
+        android:padding="10dp"
+
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/username"
+        android:layout_marginBottom="100dp"
+        android:background="#142439" />
+
+    <LinearLayout
+        android:id="@+id/stream_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/recyclerview2"
+        android:layout_alignBottom="@+id/recyclerView2"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="-106dp"
+        android:background="#142439"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/mycontacts"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#F8218411"
+            android:text="My contacts"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/allusers"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#218411"
+            android:text="All users"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/sent"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#218411"
+            android:text="sent request"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/received"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#218411"
+            android:text=" received request"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>

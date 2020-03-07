@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2"
+    android:padding="10dp"
+    tools:context=".OCR2Activity">
+
+    <Button
+        android:id="@+id/bt_gallery"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary2"
+        android:text="Gallery"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    <Button
+        android:id="@+id/bt_camera"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@id/bt_gallery"
+        android:background="@color/colorPrimary"
+        android:text="Camera"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/bt_gallery"
+        android:layout_marginTop="57dp"
+        android:scrollbars="vertical"
+        android:textIsSelectable="true" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="640dp"
+        android:layout_height="480dp"
+        android:layout_below="@id/tv_result" />
+
+</RelativeLayout>

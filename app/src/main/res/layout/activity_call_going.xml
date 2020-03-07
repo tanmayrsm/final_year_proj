@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark2"
+    android:padding="10dp"
+    tools:context=".CallGoingActivity">
+
+    <Button
+        android:id="@+id/end_call_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:text="End call"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ram"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="CONNECTED TO :"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/conn_name"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:hint="name"
+            android:textColor="#E7ECF3"
+            android:textColorHint="#F6CBCB"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="401dp"
+        android:layout_height="568dp"
+        android:layout_below="@id/l1"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="12dp"
+            android:checked="false"
+            android:switchMinWidth="56dp"
+            android:text="Native:"
+            android:textColor="#FFFFFF"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:textSize="18sp" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/colorPrimary2"
+            android:text="ToggleButton"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toggleButton1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="28dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="47dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/translated_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voice translated: "
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/hi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:text="hi"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimaryDark2"
+            android:padding="0dp"></androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+    <!-- smart reply -->
+    <LinearLayout
+        android:id="@+id/smart_rep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ttl"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+    <!-- chat btn -->
+    <LinearLayout
+        android:id="@+id/ttl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ttl2"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorAccent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageButton
+            android:id="@+id/btn_emoticon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <EditText
+            android:id="@+id/chat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="6dp" />
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_launcher_background" />
+    </LinearLayout>
+
+    <!-- chat btn close -->
+
+    <LinearLayout
+        android:id="@+id/ttl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/end_call_btn"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/view_text_btn"
+            android:layout_width="209dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/end_call_btn"
+            android:layout_centerInParent="true"
+            android:background="#273632"
+            android:text="Converted Text"
+            android:textAllCaps="false"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/view_chat_btn"
+            android:layout_width="187dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/end_call_btn"
+            android:layout_marginLeft="0dp"
+            android:background="#273632"
+            android:text="Send Message"
+            android:textAllCaps="false"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

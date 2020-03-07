@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "431310535980",
+    "firebase_url": "https://zampa-89864.firebaseio.com",
+    "project_id": "zampa-89864",
+    "storage_bucket": "zampa-89864.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431310535980:android:6e280630326f17351c4089",
+        "android_client_info": {
+          "package_name": "com.example.beproj3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431310535980-5uti4d3tceapv65jqi3544fvj4vobs5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-dYgXL2bK4q9MXZtLIoiXp8prXRZ3Kks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431310535980-5uti4d3tceapv65jqi3544fvj4vobs5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
