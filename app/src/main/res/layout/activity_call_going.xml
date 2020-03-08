@@ -16,7 +16,7 @@
         android:background="@color/colorAccent"
         android:text="End call"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -27,20 +27,20 @@
 
         <TextView
             android:id="@+id/ram"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CONNECTED TO :"
+            android:text="Connected to :"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/conn_name"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
             android:hint="name"
             android:textColor="#E7ECF3"
             android:textColorHint="#F6CBCB"
-            android:textSize="30dp"
+            android:textSize="26dp"
             android:textStyle="bold" />
 
 
@@ -62,17 +62,17 @@
             android:switchMinWidth="56dp"
             android:text="Native:"
             android:textColor="#FFFFFF"
+            android:visibility="gone"
             android:textOff="OFF"
             android:textOn="ON"
             android:textSize="18sp" />
 
         <ToggleButton
             android:id="@+id/toggleButton1"
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="100dp"
+            android:layout_gravity="center"
             android:layout_marginTop="6dp"
             android:background="@color/colorPrimary2"
             android:text="ToggleButton"
@@ -100,15 +100,17 @@
             android:visibility="gone" />
 
         <TextView
+            android:padding="4dp"
             android:id="@+id/translated_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Voice translated: "
-            android:textColor="#FFFFFF"
+            android:textColor="@color/cyan"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/hi"
+            android:padding="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
@@ -122,7 +124,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:background="@color/colorPrimaryDark2"
-            android:padding="0dp"></androidx.recyclerview.widget.RecyclerView>
+            android:padding="4dp"/>
 
     </LinearLayout>
     <!-- smart reply -->
@@ -164,30 +166,31 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/ttl2"
         android:layout_marginTop="1dp"
-        android:background="@color/colorAccent"
+        android:background="#FFFFFF"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:visibility="invisible">
 
         <ImageButton
             android:id="@+id/btn_emoticon"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_chat_view_24dp" />
 
         <EditText
             android:id="@+id/chat_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingLeft="8dp"
-            android:paddingRight="6dp" />
+            android:padding="10dp"/>
 
         <ImageButton
             android:id="@+id/btn_send"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_send_black_24dp"
+            android:background="@color/cyan"/>
     </LinearLayout>
 
     <!-- chat btn close -->
@@ -209,7 +212,7 @@
             android:text="Converted Text"
             android:textAllCaps="false"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/view_chat_btn"
@@ -221,7 +224,7 @@
             android:text="Send Message"
             android:textAllCaps="false"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
 </RelativeLayout>

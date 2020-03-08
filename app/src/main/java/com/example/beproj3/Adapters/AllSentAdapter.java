@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -82,6 +83,8 @@ public class AllSentAdapter extends RecyclerView.Adapter<AllSentAdapter.AllUsers
         String my_name ,my_id;
         ImageButton se_profile;
         CircleImageView prof_image;
+        LinearLayout LL;
+
 
         public AllUsersViewholder(View itemView) {
             super(itemView);
@@ -89,6 +92,8 @@ public class AllSentAdapter extends RecyclerView.Adapter<AllSentAdapter.AllUsers
             del_send_req = itemView.findViewById(R.id.delButton);
             se_profile = itemView.findViewById(R.id.see_profile_);
             prof_image = itemView.findViewById(R.id.itemImage);
+            LL = itemView.findViewById(R.id.LLo);
+
 
 //          add a condition to disappear send req button
 
@@ -121,6 +126,15 @@ public class AllSentAdapter extends RecyclerView.Adapter<AllSentAdapter.AllUsers
             se_profile.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    User user = userArrayList.get(getAdapterPosition());
+
+                    ((AllSent)context).viewProfile(user);
+                }
+            });
+
+            LL.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
                     User user = userArrayList.get(getAdapterPosition());
 
                     ((AllSent)context).viewProfile(user);

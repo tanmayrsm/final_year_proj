@@ -431,6 +431,8 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
 
                     //TODO
                     // add him to call history
+                    DatabaseReference busy2 = FirebaseDatabase.getInstance().getReference("Busy").child(uskaId);
+                    busy2.removeValue();
 
 
                     //idhar problem aata call end pe

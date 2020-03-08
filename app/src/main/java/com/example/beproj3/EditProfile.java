@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -46,7 +47,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class EditProfile extends AppCompatActivity {
+public class EditProfile extends Activity {
     ImageView close , image_profile;
     TextView save ,profile_pic_change;
     MaterialEditText name , email;
@@ -56,7 +57,6 @@ public class EditProfile extends AppCompatActivity {
     private Uri mImageUri;
     private StorageTask uploadTask;
     StorageReference storageRef;
-
 
     Spinner spinner1;
     String[] my_lango = {"en_GB", "hi_IN", "mr_IN", "bn_IN", "ta_IN", "te_IN"};

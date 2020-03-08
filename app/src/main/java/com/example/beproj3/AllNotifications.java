@@ -2,11 +2,15 @@ package com.example.beproj3;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,7 +41,10 @@ public class AllNotifications extends AppCompatActivity {
     ArrayList<Notts> nottsArrayList;
     DatabaseReference reference;
 
+    ImageView top;
+
     String username_string;
+    Toolbar wtg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +60,20 @@ public class AllNotifications extends AppCompatActivity {
         rsv.setHasFixedSize(true);
         rsv.setLayoutManager(new LinearLayoutManager(this));
 
+        wtg = findViewById(R.id.simple_toolbar);
+        setSupportActionBar(wtg);
+
+        top = findViewById(R.id.dp_back);
+
+        top.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(AllNotifications.this,MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
 
         //set username on top
         DatabaseReference usr = FirebaseDatabase.getInstance().getReference()

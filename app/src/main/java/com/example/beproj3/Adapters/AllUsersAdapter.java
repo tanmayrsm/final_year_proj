@@ -94,12 +94,12 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.AllUse
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.hasChild(user.getUserid())){
-                    //holder.calling.setEnabled(false);
-                    holder.calling.setText("Busy");
+                    holder.call_button.setEnabled(false);
+                    holder.call_button.setImageResource(R.drawable.ic_busy_24dp);
                 }
                 else{
-                    //holder.calling.setEnabled(true);
-                    holder.calling.setText("Call");
+                    holder.call_button.setEnabled(true);
+                    holder.call_button.setImageResource(R.drawable.ic_phone_icon_24dp);
                 }
             }
             @Override
@@ -115,9 +115,9 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.AllUse
                 if(dataSnapshot.exists()){
                     for(DataSnapshot dss : dataSnapshot.getChildren()){
                         SentModel user2 = dss.getValue(SentModel.class);
-                        if(user2.getUid().equals(firebaseUser.getUid())){
-                            holder.calling.setText("Unreachable");
-                            holder.calling.setEnabled(false);
+                        if(user2.getUid().equals(firebaseUser.getUid())) {
+                            holder.call_button.setImageResource(R.drawable.ic_block_black_24dp);
+                            holder.call_button.setEnabled(false);
                         }
                     }
                 }
@@ -138,8 +138,8 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.AllUse
                     for(DataSnapshot dss : dataSnapshot.getChildren()){
                         SentModel user2 = dss.getValue(SentModel.class);
                         if(user2.getUid().equals(user.getUserid())){
-                            holder.calling.setText("Unreachable");
-                            holder.calling.setEnabled(false);
+                            holder.call_button.setImageResource(R.drawable.ic_block_black_24dp);
+                            holder.call_button.setEnabled(false);
                         }
                     }
                 }
@@ -165,7 +165,7 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.AllUse
         TextView user_ka_naam;
         Button calling;
         String my_name ,my_id;
-        ImageButton se_chat;
+        ImageView se_chat ,call_button ,viewChat_img;
         CircleImageView prof_image;
         ImageView onlinu;
         LinearLayout vu;
@@ -173,12 +173,14 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.AllUse
         public AllUsersViewholder(View itemView) {
             super(itemView);
             user_ka_naam = itemView.findViewById(R.id.itemName);
-            calling = itemView.findViewById(R.id.callButton);
+            calling = itemView.findViewById(R.id.callButto);
             prof_image = itemView.findViewById(R.id.itemImage);
             onlinu = itemView.findViewById(R.id.online);
             vu = itemView.findViewById(R.id.view_him);
+            call_button = itemView.findViewById(R.id.callButton);
+            viewChat_img = itemView.findViewById(R.id.viewChats);
 
-            calling.setOnClickListener(new View.OnClickListener() {
+            call_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
@@ -230,7 +232,6 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.AllUse
 
                                     }
                                 });
-
 
                                 //set call details ke tu usse call karta...
 
@@ -364,6 +365,22 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.AllUse
             se_chat.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    User user = userArrayList.get(getAdapterPosition());
+
+                    auth = FirebaseAuth.getInstance();
+                    firebaseUser = auth.getCurrentUser();
+
+                    String name_conn_to = user.getName();
+                    String uska_id = user.getUserid();
+                    Toast.makeText(context, "Conn to : " + name_conn_to, Toast.LENGTH_SHORT).show();
+
+                    ((MainActivity)context).viewUser(user);
+                }
+            });
+
+            viewChat_img.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
                     User user = userArrayList.get(getAdapterPosition());
 
                     auth = FirebaseAuth.getInstance();

@@ -4,16 +4,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
+import android.app.ActionBar;
+import android.app.Activity;
 import android.content.Context;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.net.Uri;
 
@@ -28,6 +33,9 @@ import android.os.Environment;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -37,11 +45,13 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.beproj3.Adapters.AllChatsAdapter;
 import com.example.beproj3.Adapters.AllNativeChatsAdapter;
 import com.example.beproj3.Models.Chats;
 import com.example.beproj3.Models.PDF;
 import com.example.beproj3.Models.SentModel;
+import com.example.beproj3.Models.User;
 import com.example.beproj3.Models.UserStatus;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -75,11 +85,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
+import io.paperdb.Paper;
+
 public class chat_history extends AppCompatActivity
 {
     //private static final String LOG_TAG = "chat_history" ;
     RecyclerView recyclerViewr ,native_recycler;
-    TextView ch_with;
+    TextView ch_with ,usro;
     Switch s2;
     FirebaseUser firebaseUser;
     StorageReference storageReference;
@@ -87,6 +99,9 @@ public class chat_history extends AppCompatActivity
     String latitude ,longitude;
     ImageView del_chatter;
 
+    Toolbar bewda;
+    ImageView loc ,send_ , del_ ,dp_tool ,backo;
+    TextView usre ,curr_status;
 
     private String checker = "";
     public String TAG = "permission";
@@ -125,9 +140,79 @@ public class chat_history extends AppCompatActivity
         view_ocr = findViewById(R.id.real_time_ocr);
         lang_ocro = findViewById(R.id.lang_ocr);
 
-        locat = findViewById(R.id.location);
+        bewda = findViewById(R.id.barprofilee);
+        setSupportActionBar(bewda);
 
-        locat.setOnClickListener(new View.OnClickListener() {
+        loc = findViewById(R.id._location);
+        send_ = findViewById(R.id.send_btn);
+        del_ = findViewById(R.id.del__);
+        usre = findViewById(R.id.text_toolbar);
+        dp_tool = findViewById(R.id.dp_toolbar);
+        curr_status = findViewById(R.id.curr_status);
+        backo = findViewById(R.id._backo);
+
+        backo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(chat_history.this ,MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        usre.setText(uska_name);
+        getSupportActionBar().setTitle(" ");
+
+        //set his dp on toolbar
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(uskaId);
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                User user = dataSnapshot.getValue(User.class);
+                if(user.getImage_url() != null)
+                    //bewda.setLogo(user.getImage_url());
+                    Glide.with(getApplicationContext()).load(user.getImage_url()).into(dp_tool);
+                else
+                    Glide.with(getApplicationContext()).load(R.drawable.ic_face_black_24dp).into(dp_tool);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        //set current status
+        DatabaseReference rt = FirebaseDatabase.getInstance().getReference("User_status").child(uskaId);
+        rt.child("status").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.getValue().toString().equals("online")){
+                    curr_status.setText("online");
+                }else{
+                    rt.child("time").addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            curr_status.setText(dataSnapshot.getValue().toString());
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        loc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DatabaseReference data = FirebaseDatabase.getInstance().getReference("Location").child(firebaseUser.getUid());
@@ -175,7 +260,6 @@ public class chat_history extends AppCompatActivity
 
             }
         });
-
         lang_ocro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -279,6 +363,16 @@ public class chat_history extends AppCompatActivity
 
         native_recycler.setAdapter(nativeChatsAdapter);
 
+        usre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(chat_history.this ,ViewProfile.class);
+                i.putExtra("UskaId",uskaId);
+                i.putExtra("Activity","chat_history");
+                startActivity(i);
+            }
+        });
+
         ch_with.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -289,7 +383,7 @@ public class chat_history extends AppCompatActivity
             }
         });
 
-        del_chatter.setOnClickListener(new View.OnClickListener() {
+        del_.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DatabaseReference refo = FirebaseDatabase.getInstance().getReference("Call_history").child(firebaseUser.getUid()).child(uskaId);
@@ -331,6 +425,16 @@ public class chat_history extends AppCompatActivity
 
                     }
                 });
+            }
+        });
+        send_.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                storageReference = FirebaseStorage.getInstance().getReference();
+                DatabaseReference data_ref = FirebaseDatabase.getInstance().getReference().child("Call_history")
+                        .child(firebaseUser.getUid()).child(uskaId);
+
+                dumas2();
             }
         });
     }
@@ -514,6 +618,31 @@ public class chat_history extends AppCompatActivity
         });
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu2,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.view_pdfo){
+            Intent chooseFile = new Intent(Intent.ACTION_GET_CONTENT);
+            chooseFile.setType("*/*");
+            chooseFile = Intent.createChooser(chooseFile, "Choose a file");
+            startActivityForResult(chooseFile, PICKFILE_RESULT_CODE);
+
+        }
+        else if(item.getItemId() == R.id.ocr){
+            startActivity(new Intent(chat_history.this,ocr.class));
+        }
+        else if(item.getItemId() == R.id.lang_ocr){
+            startActivity(new Intent(chat_history.this , other_lang_ocr.class));
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     public void salla(String lati ,String longi){
         // Create a Uri from an intent string. Use the result to create an Intent.

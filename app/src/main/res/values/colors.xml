@@ -8,4 +8,5 @@
     <color name="colorPrimaryDark2">#142439</color>
     <color name="colorAccent2">#FF4081</color>
     <color name="bgBottomNavigation">#fe485a</color>
+    <color name="cyan">#03A9FD</color>
 </resources>

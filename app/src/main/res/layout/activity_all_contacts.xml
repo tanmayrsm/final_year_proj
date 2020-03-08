@@ -16,6 +16,15 @@
         android:padding="10dp"
         android:text="username"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:visibility="gone"/>
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cyan"
+        android:padding="15dp"
+        android:hint="🔍Search..."
         android:textColor="#FFFFFF" />
 
 
@@ -23,7 +32,7 @@
         android:id="@+id/recyclerView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/username_in_allcontacts"
+        android:layout_below="@+id/search"
         android:layout_marginBottom="100dp"
         android:background="@color/colorPrimaryDark2" />
 
@@ -33,48 +42,120 @@
         android:layout_height="100dp"
         android:layout_below="@+id/recyclerview2"
         android:layout_alignBottom="@+id/recyclerView2"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="-102dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="-105dp"
         android:background="#142439"
         android:orientation="horizontal"
         android:padding="5dp">
 
-        <Button
-            android:id="@+id/mycontacts"
-            android:layout_width="82dp"
+        <LinearLayout
+            android:id="@+id/my_contacts_linear"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#F8218411"
-            android:text="My contacts"
-            android:textColor="#FFFFFF" />
+            android:background="#142439"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/allusers"
-            android:layout_width="62dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#218411"
-            android:text="All users"
-            android:textColor="#FFFFFF" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_contacts_black_24dp" />
 
-        <Button
-            android:id="@+id/sent"
-            android:layout_width="72dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#218411"
-            android:text=" sent request"
-            android:textColor="#FFFFFF"  />
+            <Button
+                android:id="@+id/mycontacts"
+                android:layout_width="82dp"
+                android:layout_height="12dp"
+                android:layout_margin="10dp"
+                android:background="#142439"
+                android:text="My Contacts"
+                android:textColor="#FFFFFF"
+                style="?android:attr/borderlessButtonStyle"
+                android:textAllCaps="false"
+                android:textSize="9sp" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/received"
-            android:layout_width="94dp"
+        <LinearLayout
+            android:id="@+id/my_users_linear"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#218411"
-            android:text=" received request"
-            android:textColor="#FFFFFF" />
+            android:background="#142439"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:src="@drawable/ic_person_black_24dp" />
+            <Button
+                android:id="@+id/allusers"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#142439"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="All Users"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_sent_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#142439"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:src="@drawable/ic_sent_req_24dp" />
+            <Button
+                android:id="@+id/sent"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#142439"
+                android:textAllCaps="false"
+                android:text="Sent"
+                android:textSize="9sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_received_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#142439"
+            android:orientation="vertical"
+            android:layout_marginLeft="-12dp">
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/ic_call_received_black_24dp" />
+
+            <Button
+                android:id="@+id/received"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#142439"
+                android:textAllCaps="false"
+                android:textSize="9sp"
+                android:text="Received"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
 
     </LinearLayout>
+
 
 </RelativeLayout>

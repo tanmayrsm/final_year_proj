@@ -8,9 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Telephony;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +45,8 @@ public class AllSent extends AppCompatActivity {
     DatabaseReference reference;
     TextView usrname;
     boolean bullo = false;
+    EditText searcho;
+
 
     //khalti che 4 button
     Button my_contacts ,my_users , sent_acti ,received_acti;
@@ -51,6 +56,9 @@ public class AllSent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_sent);
+
+        searcho = findViewById(R.id.search);
+
 
         recyclerView = findViewById(R.id.recyclerView2);
         usrname = findViewById(R.id.username_in_allsent);
@@ -122,6 +130,75 @@ public class AllSent extends AppCompatActivity {
         });
 
         fetchAllUsers();
+
+        //fetch the searched users
+        searcho.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(searcho.getText().toString().length() > 0)
+                    fetchSearchedUsers(searcho.getText().toString());
+                else if(searcho.getText().toString().length() == 0)
+                    fetchAllUsers();
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+    }
+
+    private void fetchSearchedUsers(String toString) {
+        DatabaseReference refo = FirebaseDatabase.getInstance().getReference("conn_req").child(firebaseUser.getUid()).child("sent");
+        refo.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                //ArrayList<User> userArrayList = new ArrayList<>();
+                userArrayList.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    SentModel sento = snapshot.getValue(SentModel.class);
+
+                    Log.e("pop",sento.toString());
+                    DatabaseReference refi = FirebaseDatabase.getInstance().getReference("Users").child(sento.uid);
+                    refi.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            User user = dataSnapshot.getValue(User.class);
+                            Log.e("User:",user.toString());
+
+                            if(user.getName().toLowerCase().contains(toString.toLowerCase()))
+                                userArrayList.add(user);
+                            // Log.e("Sending1:",userArrayList.toString());
+                            AllSentAdapter adapter = new AllSentAdapter(AllSent.this ,userArrayList);
+                            recyclerView.setAdapter(adapter);
+                            adapter.notifyDataSetChanged();
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+                    Log.e("Sending2:",userArrayList.toString());
+                }
+
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
     @Override

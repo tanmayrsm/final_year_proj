@@ -8,6 +8,8 @@
     android:orientation="vertical"
     tools:context=".Allpreviouscalls">
 
+    <include layout="@layout/simple_toolbar"/>
+
     <TextView
         android:id="@+id/username_in_allprevious"
         android:layout_width="match_parent"

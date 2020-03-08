@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +23,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.provider.Settings;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,6 +35,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.beproj3.Adapters.AllNotificationsAdapter;
 import com.example.beproj3.Adapters.AllReceivedAdapter;
 import com.example.beproj3.Adapters.AllUsersAdapter;
@@ -72,6 +76,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity implements
@@ -86,15 +91,18 @@ public class MainActivity extends AppCompatActivity implements
     ArrayList<User> userArrayList;
     DatabaseReference reference;
     TextView usrname ;
-    ImageView not_bell ,prevCalls;
+    ImageView not_bell ,prevCalls ,searc;
     int no_of_notifications = 0;
     ProgressDialog loadingbar;
     public boolean bullap = false;
     MediaPlayer player;
     boolean lagau = true;
+    Toolbar toola;
+    EditText searcho;
 
     private Vibrator vib;
     private MediaPlayer mp;
+    CircleImageView tool_dp;
 
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
     private GoogleApiClient mGoogleApiClient;
@@ -108,32 +116,30 @@ public class MainActivity extends AppCompatActivity implements
 
     String my_id ,my_name ,uska_id ,uska_name ,usrname_string,he_id ,usrname_string_email;
 
-    private ActionBar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        toolbar = getSupportActionBar();
-//
-//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-//        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-//
-//        toolbar.setTitle("Shop");
+        toola = findViewById(R.id.mainbaro);
+        setSupportActionBar(toola);
+        searc = findViewById(R.id.search_btn);
 
 
+
+        searcho = findViewById(R.id.search);
 
         recyclerView = findViewById(R.id.recyclerView2);
-        usrname = findViewById(R.id.username);
-
-        usrname.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                bullap = true;
-                startActivity(new Intent(MainActivity.this ,EditProfile.class));
-            }
-        });
+//        usrname = findViewById(R.id.username);
+//
+//        usrname.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                bullap = true;
+//                startActivity(new Intent(MainActivity.this ,EditProfile.class));
+//            }
+//        });
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -154,6 +160,35 @@ public class MainActivity extends AppCompatActivity implements
         received_acti = findViewById(R.id.received);
 
         prevCalls = findViewById(R.id.call_history);
+
+        tool_dp = findViewById(R.id.dp_toolbar2);
+        //set dp on toolbar
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                User user = dataSnapshot.getValue(User.class);
+                if(user.getImage_url() != null)
+                    Glide.with(getApplicationContext()).load(user.getImage_url()).into(tool_dp);
+                else
+                    Glide.with(getApplicationContext()).load(R.drawable.ic_face_black_24dp).into(tool_dp);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        tool_dp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bullap = true;
+                startActivity(new Intent(MainActivity.this ,EditProfile.class));
+            }
+        });
+
 
         //previous call history tab
         prevCalls.setOnClickListener(new View.OnClickListener() {
@@ -207,6 +242,21 @@ public class MainActivity extends AppCompatActivity implements
             }
         });
 
+        //search bar visible
+        searc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    if(searcho.getVisibility() == View.GONE)
+                        searcho.setVisibility(View.VISIBLE);
+                    else if(searcho.getVisibility() == View.VISIBLE)
+                    {
+                        searcho.setVisibility(View.GONE);
+                        fetchAllUsers();
+                    }
+            }
+        });
+
+
         usrname_string = firebaseUser.getUid();
         DatabaseReference usr = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(usrname_string).child("email");
@@ -214,7 +264,7 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 usrname_string_email = dataSnapshot.getValue().toString();
-                usrname.setText(usrname_string_email);
+                //usrname.setText(usrname_string_email);
             }
 
             @Override
@@ -233,7 +283,6 @@ public class MainActivity extends AppCompatActivity implements
 
         sinchClient.setSupportCalling(true);
         sinchClient.startListeningOnActiveConnection();
-
         sinchClient.getCallClient().addCallClientListener(new SinchCallClientListener(){
 
         });
@@ -241,6 +290,27 @@ public class MainActivity extends AppCompatActivity implements
 
         fetchAllUsers();
         set_no_of_notifications();
+
+        //fetch the searched users
+        searcho.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(searcho.getText().toString().length() > 0)
+                    fetchSearchedUsers(searcho.getText().toString());
+                else if(searcho.getText().toString().length() == 0)
+                    fetchAllUsers();
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
 
         ///ur location
 
@@ -257,6 +327,8 @@ public class MainActivity extends AppCompatActivity implements
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                 .setInterval(10 * 1000)        // 10 seconds, in milliseconds
                 .setFastestInterval(1 * 1000); // 1 second, in milliseconds
+
+
     }
 
 
@@ -465,6 +537,73 @@ public class MainActivity extends AppCompatActivity implements
 //        });
     }
 
+    private void fetchSearchedUsers(String s) {
+
+        DatabaseReference refg = FirebaseDatabase.getInstance().getReference("Contact_list").child(firebaseUser.getUid());
+
+        refg.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                userArrayList.clear();
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    SentModel sento = snapshot.getValue(SentModel.class);
+//                    Log.e("My contacts",sento.toString());
+//                    Log.e("sento uid:",sento.uid);
+                    DatabaseReference refi = FirebaseDatabase.getInstance().getReference("Users").child(sento.uid);
+                    refi.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            User user = dataSnapshot.getValue(User.class);
+                            Log.e("User:",user.toString());
+                            Log.e("user array list before",userArrayList.toString());
+
+                            if(user.getName().toLowerCase().contains(s.toLowerCase()))
+                                userArrayList.add(user);
+
+                            Log.e("MyCOntact1 in search:",userArrayList.toString());
+                            AllUsersAdapter adapter = new AllUsersAdapter(MainActivity.this ,userArrayList);
+                            recyclerView.setAdapter(adapter);
+                            adapter.notifyDataSetChanged();
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+                    Log.e("Main all contacts:",userArrayList.toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+//        reference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                userArrayList.clear();
+//                for(DataSnapshot dss : dataSnapshot.getChildren()){
+//                    User user = dss.getValue(User.class);
+//                    if(!user.getUserid().equals(firebaseUser.getUid()))
+//                        userArrayList.add(user);
+//                }
+//
+//                AllUsersAdapter adapter = new AllUsersAdapter(MainActivity.this ,userArrayList);
+//                recyclerView.setAdapter(adapter);
+//
+//                adapter.notifyDataSetChanged();
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                Toast.makeText(MainActivity.this, "error h :"+databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+    }
 
     private class SinchCallListener implements CallListener {
 
@@ -547,8 +686,7 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);
-
-        return super.onCreateOptionsMenu(menu);
+        return true;
     }
 
     @Override

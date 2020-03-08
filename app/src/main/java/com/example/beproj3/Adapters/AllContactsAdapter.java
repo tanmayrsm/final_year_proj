@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -84,6 +85,7 @@ public class AllContactsAdapter extends RecyclerView.Adapter<AllContactsAdapter.
                     String s = snapshot.child("uid").getValue().toString();
                     if(s.equals(user.getUserid())){
                         holder.send_req.setEnabled(false);
+                        holder.send_req.setText("Req Sent");
                     }
                 }
             }
@@ -104,7 +106,7 @@ public class AllContactsAdapter extends RecyclerView.Adapter<AllContactsAdapter.
                     //Log.e("Andar ka snapshot:",snapshot.child("uid").getValue().toString());
                     String s = snapshot.child("uid").getValue().toString();
                     if(s.equals(user.getUserid())){
-                        holder.send_req.setBackgroundColor(Color.GREEN);
+                        holder.send_req.setBackgroundColor(Color.BLUE);
                         holder.send_req.setText("Accept");
                     }
                 }
@@ -124,8 +126,8 @@ public class AllContactsAdapter extends RecyclerView.Adapter<AllContactsAdapter.
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     //Log.e("snapshot keyyy:",snapshot.getKey());
                     if(user.getUserid().equals(snapshot.getKey())){
-                        holder.send_req.setBackgroundColor(Color.BLUE);
-                        holder.send_req.setTextColor(Color.WHITE);
+                        holder.send_req.setBackgroundResource(R.drawable.button_friend2);
+                        holder.send_req.setTextColor(Color.GRAY);
                         holder.send_req.setText("Friend");
                         holder.send_req.setEnabled(false);
                     }
@@ -152,6 +154,7 @@ public class AllContactsAdapter extends RecyclerView.Adapter<AllContactsAdapter.
         String my_name ,my_id;
         ImageButton se_profile;
         CircleImageView prof_image;
+        LinearLayout LL;
 
         public AllUsersViewholder(View itemView) {
             super(itemView);
@@ -159,6 +162,7 @@ public class AllContactsAdapter extends RecyclerView.Adapter<AllContactsAdapter.
             send_req = itemView.findViewById(R.id.connectButton);
             se_profile = itemView.findViewById(R.id.see_profile);
             prof_image = itemView.findViewById(R.id.userProfileImage);
+            LL = itemView.findViewById(R.id.LLo);
 
 //          add a condition to disappear send req button
 
@@ -231,10 +235,10 @@ public class AllContactsAdapter extends RecyclerView.Adapter<AllContactsAdapter.
                                         }
                                     }
                                 });
-
                         ((AllContacts)context).sendReq(user);
                     }else{
                         //Goto received req activity
+                        ((AllContacts)context).acc();
                     }
                 }
             });
@@ -244,6 +248,15 @@ public class AllContactsAdapter extends RecyclerView.Adapter<AllContactsAdapter.
             se_profile.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    User user = userArrayList.get(getAdapterPosition());
+
+                    ((AllContacts)context).viewProfile(user);
+                }
+            });
+
+            LL.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
                     User user = userArrayList.get(getAdapterPosition());
 
                     ((AllContacts)context).viewProfile(user);

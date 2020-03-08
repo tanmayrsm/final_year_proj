@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -83,6 +84,8 @@ public class AllReceivedAdapter extends RecyclerView.Adapter<AllReceivedAdapter.
         String my_name ,my_id;
         ImageButton se_chat;
         CircleImageView prof_image;
+        LinearLayout LL;
+
 
         public AllUsersViewholder(View itemView) {
             super(itemView);
@@ -90,6 +93,8 @@ public class AllReceivedAdapter extends RecyclerView.Adapter<AllReceivedAdapter.
             accepts = itemView.findViewById(R.id.accept);
             reject = itemView.findViewById(R.id.reject);
             prof_image = itemView.findViewById(R.id.itemImage);
+            LL = itemView.findViewById(R.id.LLo);
+
 
 
             accepts.setOnClickListener(new View.OnClickListener() {
@@ -214,6 +219,22 @@ public class AllReceivedAdapter extends RecyclerView.Adapter<AllReceivedAdapter.
             se_chat.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    User user = userArrayList.get(getAdapterPosition());
+
+                    auth = FirebaseAuth.getInstance();
+                    firebaseUser = auth.getCurrentUser();
+
+                    String name_conn_to = user.getName();
+                    String uska_id = user.getUserid();
+                    //Toast.makeText(context, "Conn to : " + name_conn_to, Toast.LENGTH_SHORT).show();
+
+                    ((AllReceived)context).viewProfile(user);
+                }
+            });
+
+            LL.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
                     User user = userArrayList.get(getAdapterPosition());
 
                     auth = FirebaseAuth.getInstance();

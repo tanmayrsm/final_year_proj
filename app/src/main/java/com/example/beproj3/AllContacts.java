@@ -7,9 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +42,7 @@ public class AllContacts extends AppCompatActivity {
     DatabaseReference reference;
     TextView usrname;
     boolean bullo = false;
+    EditText searcho;
 
     //khalti che 4 button
     Button my_contacts ,my_users , sent_acti ,received_acti;
@@ -50,6 +54,8 @@ public class AllContacts extends AppCompatActivity {
         setContentView(R.layout.activity_all_contacts);
 
 
+
+        searcho = findViewById(R.id.search);
 
         recyclerView = findViewById(R.id.recyclerView2);
         usrname = findViewById(R.id.username_in_allcontacts);
@@ -119,6 +125,71 @@ public class AllContacts extends AppCompatActivity {
         });
 
         fetchAllUsers();
+
+        //fetch the searched users
+        searcho.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(searcho.getText().toString().length() > 0)
+                    fetchSearchedUsers(searcho.getText().toString());
+                else if(searcho.getText().toString().length() == 0)
+                    fetchAllUsers();
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+//if(user.getName().toLowerCase().contains(s.toLowerCase()))
+//
+    }
+
+    private void fetchSearchedUsers(String toString) {
+        reference = FirebaseDatabase.getInstance().getReference().child("Users");
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                ArrayList<User> userArrayList = new ArrayList<>();
+                userArrayList.clear();
+
+                if(!dataSnapshot.exists()){
+                    Toast.makeText(AllContacts.this, "No users registered", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                Log.e("all contacts efore","userarraylist:"+userArrayList.toString());
+
+                for(DataSnapshot dss : dataSnapshot.getChildren()){
+
+                    User user = dss.getValue(User.class);
+                    Log.e("user and fireid:",user.getUserid()+" --" +firebaseUser.getUid());
+
+                    if(!user.getUserid().equals(firebaseUser.getUid()) ){
+                        if(user.getName().toLowerCase().contains(toString.toLowerCase()))
+                            userArrayList.add(user);
+                        Log.e("Added:",user.getEmail());
+                    }
+
+                    AllContactsAdapter adapter = new AllContactsAdapter(AllContacts.this ,userArrayList);
+                    recyclerView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+                }
+
+                //Log.e("all contacts","userarraylist:"+userArrayList.toString());
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(AllContacts.this, "error h :"+databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -219,5 +290,12 @@ public class AllContacts extends AppCompatActivity {
         i.putExtra("Activity","Contacts");
         bullo = true;
         startActivity(i);
+    }
+
+    public void  acc(){
+        bullo = true;
+        Intent i = new Intent(AllContacts.this,AllReceived.class);
+        startActivity(i);
+        finish();
     }
 }

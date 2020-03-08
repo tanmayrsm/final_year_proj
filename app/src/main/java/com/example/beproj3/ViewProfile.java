@@ -3,6 +3,7 @@ package com.example.beproj3;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -47,6 +48,7 @@ public class ViewProfile extends AppCompatActivity {
     private Uri mImageUri;
     private StorageTask uploadTask;
     StorageReference storageRef;
+    Toolbar tolb;
 
     LinearLayout main ,block ,removei;
 
@@ -62,6 +64,9 @@ public class ViewProfile extends AppCompatActivity {
         email = findViewById(R.id.his_email);
         lang = findViewById(R.id.his_lang);
         block_text = findViewById(R.id.block_text);
+
+        tolb = findViewById(R.id.mainbaro);
+        setSupportActionBar(tolb);
 
         main = findViewById(R.id.linea);
         block = findViewById(R.id.block_layout);

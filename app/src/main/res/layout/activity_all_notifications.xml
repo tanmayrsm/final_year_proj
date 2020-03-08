@@ -8,6 +8,8 @@
     android:orientation="vertical"
     tools:context=".AllNotifications">
 
+    <include layout="@layout/simple_toolbar"/>
+
     <TextView
         android:id="@+id/username_in_allnotifications"
         android:layout_width="match_parent"
