@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,7 @@
     tools:context=".AllprevMessages"
     android:orientation="vertical"
     >
+    <include layout="@layout/barprofile"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -14,39 +15,38 @@
         android:id="@+id/username_in_allprev_messages"
         android:text="username"
         android:padding="10dp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:visibility="gone"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/llo"
-        android:layout_below="@+id/username_in_allprev_messages">
     <Switch
         android:id="@+id/switch3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:switchMinWidth="56dp"
         android:layout_marginTop="1dp"
+        android:gravity="center_horizontal"
         android:text="Switch Language  "
         android:checked="false"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
         android:textOff="OFF"
         android:textOn="ON"/>
-    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recyclerView46"
         android:layout_marginBottom="100dp"
-        android:layout_below="@+id/llo"/>
+        android:padding="5dp"
+        android:layout_below="@+id/switch3"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/native_recyclerview12"
+        android:padding="5dp"
         android:layout_marginTop="5dp"
         android:visibility="gone"
-        android:layout_below="@+id/llo"/>
+        android:layout_below="@+id/switch3"/>
 
-</RelativeLayout>
+</LinearLayout>

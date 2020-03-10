@@ -18,39 +18,37 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllContactsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllContactsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllReceivedAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllReceivedAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllSentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllSentAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNativeChatsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNativeChatsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllprevCallsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllprevCallsAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllContacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllContacts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllSent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllSent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/EditProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/EditProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllprevMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllprevMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/ViewProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/ViewProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_history_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_history_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/roundcorners.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/roundcorners.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/roundcorners2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/roundcorners2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_contacts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_contacts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_notifications.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_notifications.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_received.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_received.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_sent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_all_sent.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_allprev_messages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_allprev_messages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_allpreviouscalls.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_allpreviouscalls.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_call_going.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_call_going.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profile.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/all_contacts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/all_contacts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/all_notts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/all_notts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/all_received.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/all_received.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/all_sent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/all_sent.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/all_users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/all_users.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/barprofile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/barprofile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/chat_message_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/chat_message_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/prev_call_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/prev_call_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/simple_toolbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/simple_toolbar.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,7 +60,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="1078509b" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="e07df042" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -76,99 +74,77 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="232">
+              <caret line="107" column="26" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_allpreviouscalls.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chat_message_layout.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="20" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="20" />
+            <state relative-caret-position="252">
+              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml">
-          <provider editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="29" column="29" selection-end-line="71" selection-end-column="36" />
+            <state relative-caret-position="3297">
+              <caret line="355" column="47" selection-start-line="355" selection-start-column="47" selection-end-line="355" selection-end-column="47" />
               <folding>
-                <element signature="e#1509#1749#0" />
-                <element signature="e#1755#2019#0" />
+                <element signature="class#6983:7906" />
+                <element signature="e#13401#13443#0" />
+                <element signature="class#14097:14423" />
+                <element signature="class#14466:14792" />
+                <element signature="class#17274:17679" />
+                <element signature="class#19548:20197" />
+                <element signature="class#20398:21032" />
+                <element signature="class#21077:22973" />
+                <element signature="e#21490#21559#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="1338" column="31" selection-start-line="1338" selection-start-column="31" selection-end-line="1338" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_contacts.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="27" column="38" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="27" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="125" column="15" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="15" />
+            <state relative-caret-position="490">
+              <caret line="115" column="92" selection-start-line="115" selection-start-column="92" selection-end-line="115" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4597#4645#0" />
-                <element signature="class#5871:6465" />
-                <element signature="class#6508:6735" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_notifications.xml">
-          <provider editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllprevMessages.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            <state relative-caret-position="522">
+              <caret line="205" column="47" lean-forward="true" selection-start-line="183" selection-start-column="28" selection-end-line="205" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="157" column="53" selection-start-line="157" selection-start-column="47" selection-end-line="157" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNativeChatsAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="class#2016:2393" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_toolbar.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="461">
+              <caret line="254" column="13" selection-start-line="254" selection-start-column="13" selection-end-line="254" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -186,36 +162,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>alert</find>
-      <find>optio</find>
-      <find>bewda</find>
-      <find>setSupportActionBar</find>
-      <find>toolbar</find>
+      <find>call_rece</find>
+      <find>call_re</find>
+      <find>gli</find>
+      <find>time</find>
+      <find>no_of_notts</find>
+      <find>not_bell</find>
+      <find>speechrec</find>
+      <find>uska_name</find>
+      <find>del_.se</find>
+      <find>pdf</find>
+      <find>Location</find>
+      <find>pdf&quot;</find>
       <find>onstart</find>
-      <find>tool</find>
-      <find>toolba</find>
-      <find>action</find>
-      <find>call_his</find>
-      <find>usrname</find>
-      <find>image</find>
-      <find>callbutton</find>
-      <find>imageview</find>
-      <find>sea</find>
-      <find>seten</find>
-      <find>acce</find>
-      <find>button_</find>
-      <find>setbac</find>
-      <find>setac</find>
-      <find>_lo</find>
-      <find>onop</find>
+      <find>white</find>
+      <find>adapter</find>
+      <find>bottom</find>
+      <find>allcon</find>
+      <find>my_con</find>
+      <find>runna</find>
+      <find>noti</find>
+      <find>posi</find>
+      <find>recycler</find>
+      <find>chatlist</find>
+      <find>notify</find>
+      <find>alert</find>
       <find>glide</find>
-      <find>barpro</find>
-      <find>ch_with</find>
-      <find>end.</find>
-      <find>actionba</find>
-      <find>flage</find>
-      <find>fla</find>
-      <find>setsupp</find>
+      <find>visibl</find>
+      <find>uska_img</find>
+      <find>invisi</find>
+      <find>uska_imag</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -224,16 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Emergency.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_emergency.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/Locatioi.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/UserStatus.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllprevMessages.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_view_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_history_.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_.xml" />
@@ -242,37 +208,49 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/ViewProfile.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/roundcorners.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_contacts.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_sent.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_received.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllSent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllSentAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllReceivedAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_received.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_sent.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/button_connect.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/button_friend.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllContactsAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/button_friend2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllContacts.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/barprofile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_users.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_contacts.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_call_going.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_notifications.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/simple_toolbar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_allpreviouscalls.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllprevCallsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/simple_toolbar.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_received.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_sent.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_contacts.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_notts.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNotificationsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_allprev_messages.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllprevMessages.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/barprofile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/prev_call_history.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/roundcorners2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_users.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_contacts.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_sent.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_received.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllContacts.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllSent.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_notifications.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/simple_bar2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/chat_message_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNativeChatsAdapter.java" />
       </list>
     </option>
   </component>
@@ -288,6 +266,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -332,14 +312,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="1078509b" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-03-08T18:13:33.426Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="e07df042" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-03-10T07:04:30.766Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -441,7 +419,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18926175" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15100671" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -456,7 +434,7 @@
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3555241" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.04249292" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -465,139 +443,8 @@
       <window_info anchor="right" id="Preview" order="4" weight="0.25637585" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2033557" />
-      <window_info id="Structure" order="1" side_tool="true" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Build Variants" order="6" side_tool="true" />
-      <window_info id="Resources Explorer" order="7" />
-      <window_info id="Captures" order="8" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="0" />
-      <window_info anchor="bottom" id="TODO" order="1" />
-      <window_info anchor="bottom" id="Logcat" order="2" weight="0.65014166" />
-      <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3555241" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.3295302" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/UserStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/Locatioi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding>
-            <element signature="e#360#361#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllprevMessages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Emergency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/SentModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="237" column="26" selection-start-line="237" selection-start-column="26" selection-end-line="237" selection-end-column="26" />
-          <folding>
-            <element signature="e#8957#8958#0" expanded="true" />
-            <element signature="e#9003#9004#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_history_.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="76" column="45" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -612,25 +459,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profile.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/EditProfile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1176">
           <caret line="101" column="11" selection-start-line="85" selection-start-column="8" selection-end-line="101" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/roundcorners.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -643,62 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
           <caret line="99" column="58" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="371" lean-forward="true" selection-start-line="371" selection-end-line="371" />
-          <folding>
-            <element signature="e#6245#6246#0" expanded="true" />
-            <element signature="class#6808:16086" />
-            <element signature="class#9193:9702" />
-            <element signature="class#10283:10852" />
-            <element signature="class#11158:11727" />
-            <element signature="class#12091:12660" />
-            <element signature="class#12968:13537" />
-            <element signature="class#14234:15738" />
-            <element signature="class#16128:16727" />
-            <element signature="class#17830:17982" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_sent.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_received.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllSent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="176" column="28" lean-forward="true" selection-start-line="175" selection-start-column="28" selection-end-line="176" selection-end-column="28" />
-          <folding>
-            <element signature="class#4655:5275" />
-            <element signature="class#5569:7221" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
-          <folding>
-            <element signature="class#5445:7120" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,22 +496,6 @@
             <element signature="class#3336:7807" />
             <element signature="class#7854:8978" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_received.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_sent.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
@@ -778,24 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllContacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="297" column="8" selection-start-line="297" selection-start-column="8" selection-end-line="297" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -812,52 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/barprofile.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="194" column="68" selection-start-line="194" selection-start-column="68" selection-end-line="194" selection-end-column="68" />
-          <folding>
-            <element signature="class#5607:6201" />
-            <element signature="method#onCancelled#0;class#5607:6201" />
-            <element signature="class#5342:7476" />
-            <element signature="class#7301:7498" />
-            <element signature="class#7814:8459" />
-            <element signature="class#8660:9290" />
-            <element signature="class#9337:9861" />
-            <element signature="class#9955:10339" />
-            <element signature="e#11595#11596#0" expanded="true" />
-            <element signature="e#11681#11682#0" expanded="true" />
-            <element signature="class#15921:16570" />
-            <element signature="class#16771:17405" />
-            <element signature="e#17863#17932#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_users.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_contacts.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_call_going.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -866,86 +562,343 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_allpreviouscalls.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_received.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_sent.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_contacts.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="63" column="51" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_notts.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllprevCallsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="144" column="67" selection-start-line="144" selection-start-column="67" selection-end-line="144" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNotificationsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="111" column="40" lean-forward="true" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/prev_call_history.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="40" column="51" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_users.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="2019" column="45" selection-start-line="2019" selection-start-column="36" selection-end-line="2019" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/roundcorners.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/roundcorners2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-756">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+          <folding>
+            <element signature="e#6202#6203#0" expanded="true" />
+            <element signature="e#6245#6246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profile.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_contacts.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="38" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="27" selection-end-column="38" />
+        <state relative-caret-position="561">
+          <caret line="164" column="19" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="19" />
+          <folding>
+            <element signature="e#1843#2881#0" />
+            <element signature="e#2891#3958#0" />
+            <element signature="e#3968#4991#0" />
+            <element signature="e#5001#6093#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="85" column="63" selection-start-line="85" selection-start-column="63" selection-end-line="85" selection-end-column="63" />
+          <folding>
+            <element signature="class#2077:2447" />
+            <element signature="class#2488:2853" />
+            <element signature="class#2894:3263" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllSent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="92" column="45" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllContacts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="95" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#2023:2394" />
+            <element signature="class#2435:2802" />
+            <element signature="class#2843:3214" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#4808:5179" />
+            <element signature="class#5224:5591" />
+            <element signature="class#5640:6011" />
+            <element signature="e#4597#4645#0" />
+            <element signature="class#5871:6465" />
+            <element signature="class#6508:6735" />
+            <element signature="class#6817:7046" />
+            <element signature="class#7109:7338" />
+            <element signature="class#7384:7616" />
+            <element signature="class#7683:8054" />
+            <element signature="class#8099:8466" />
+            <element signature="class#8515:8886" />
+            <element signature="e#12178#18092#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_sent.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="162" column="19" selection-start-line="162" selection-start-column="19" selection-end-line="162" selection-end-column="19" />
+          <folding>
+            <element signature="e#1809#2847#0" />
+            <element signature="e#2857#3924#0" />
+            <element signature="e#3934#4957#0" />
+            <element signature="e#4967#6059#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="38" column="39" lean-forward="true" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+          <folding>
+            <element signature="e#793#1104#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_received.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+          <folding>
+            <element signature="e#2858#3925#0" />
+            <element signature="e#3935#4958#0" />
+            <element signature="e#4968#6060#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="29" column="29" selection-end-line="71" selection-end-column="36" />
-          <folding>
-            <element signature="e#1509#1749#0" />
-            <element signature="e#1755#2019#0" />
-          </folding>
+        <state relative-caret-position="24">
+          <caret line="56" column="51" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="1338" column="31" selection-start-line="1338" selection-start-column="31" selection-end-line="1338" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/barprofile.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_allpreviouscalls.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="20" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_toolbar.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="444">
+          <caret line="72" column="33" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="72" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_notifications.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        <state relative-caret-position="465">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_toolbar.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="125" column="15" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4597#4645#0" />
-            <element signature="class#5871:6465" />
-            <element signature="class#6508:6735" />
-          </folding>
+        <state relative-caret-position="507">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_bar2.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_allprev_messages.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllprevMessages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="205" column="47" lean-forward="true" selection-start-line="183" selection-start-column="28" selection-end-line="205" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+        <state relative-caret-position="490">
+          <caret line="115" column="92" selection-start-line="115" selection-start-column="92" selection-end-line="115" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#2016:2393" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="107" column="26" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chat_message_layout.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3297">
+          <caret line="355" column="47" selection-start-line="355" selection-start-column="47" selection-end-line="355" selection-end-column="47" />
+          <folding>
+            <element signature="class#6983:7906" />
+            <element signature="e#13401#13443#0" />
+            <element signature="class#14097:14423" />
+            <element signature="class#14466:14792" />
+            <element signature="class#17274:17679" />
+            <element signature="class#19548:20197" />
+            <element signature="class#20398:21032" />
+            <element signature="class#21077:22973" />
+            <element signature="e#21490#21559#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="157" column="53" selection-start-line="157" selection-start-column="47" selection-end-line="157" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNativeChatsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="254" column="13" selection-start-line="254" selection-start-column="13" selection-end-line="254" selection-end-column="13" />
         </state>
       </provider>
     </entry>

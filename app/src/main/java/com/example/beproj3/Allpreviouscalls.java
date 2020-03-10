@@ -2,12 +2,16 @@ package com.example.beproj3;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +40,10 @@ public class Allpreviouscalls extends AppCompatActivity {
     ArrayList<User> userArrayList;
     DatabaseReference reference;
     TextView usrname;
+    LinearLayout ll;
+
+    ImageView top;
+    Toolbar wid;
 
     String my_id ,my_name ,uska_id ,uska_name ,usrname_string ,usrname_string_email;
 
@@ -51,6 +59,24 @@ public class Allpreviouscalls extends AppCompatActivity {
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        wid = findViewById(R.id.simple_toolbar);
+        setSupportActionBar(wid);
+        getSupportActionBar().setTitle("");
+
+
+        top = findViewById(R.id.dp_back);
+
+        top.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Allpreviouscalls.this,MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+
 
         //set username on top
         DatabaseReference usr = FirebaseDatabase.getInstance().getReference()

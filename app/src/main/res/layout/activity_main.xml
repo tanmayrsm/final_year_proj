@@ -10,9 +10,7 @@
 
     <include layout="@layout/mainbar"/>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
@@ -35,7 +33,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView2"
         android:layout_width="match_parent"
-        android:layout_height="694dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/search"
         android:layout_marginTop="-2dp"
         android:layout_marginBottom="100dp"
@@ -43,28 +41,28 @@
 
     <LinearLayout
         android:id="@+id/stream_buttons"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="101dp"
         android:layout_below="@+id/recyclerview2"
-        android:layout_alignBottom="@+id/recyclerView2"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="-105dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
         android:background="#142439"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:padding="1dp">
 
         <LinearLayout
             android:id="@+id/my_contacts_linear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#142439"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="42dp"
                 android:src="@drawable/ic_contacts_black_24dp" />
 
             <Button
@@ -85,14 +83,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#142439"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginLeft="4dp">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/ic_person_black_24dp" />
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="42dp"
+                android:src="@drawable/ic_person_black_24dp"
+                />
 
             <Button
                 android:id="@+id/allusers"
@@ -104,6 +104,7 @@
                 android:text="All Users"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
+
                 android:textSize="9sp" />
         </LinearLayout>
 
@@ -112,13 +113,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#142439"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginLeft="4dp">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="34dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="42dp"
                 android:src="@drawable/ic_sent_req_24dp" />
 
             <Button
@@ -138,21 +140,20 @@
             android:id="@+id/my_received_linear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="-12dp"
             android:background="#142439"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="44dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="42dp"
                 android:src="@drawable/ic_call_received_black_24dp" />
 
             <Button
                 android:id="@+id/received"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="94dp"
+                android:layout_width="84dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="#142439"

@@ -91,7 +91,7 @@ public class AllNativeChatsAdapter extends RecyclerView.Adapter<AllNativeChatsAd
 
         //watch 50 no to add image
         holder.uska_msg.setVisibility(View.INVISIBLE);
-        holder.uska_image.setVisibility(View.INVISIBLE);
+        //holder.uska_image.setVisibility(View.INVISIBLE);
         holder.uska_time.setVisibility(View.INVISIBLE);
 
         if(id.equals(firebaseUser.getUid())){
@@ -240,7 +240,7 @@ public class AllNativeChatsAdapter extends RecyclerView.Adapter<AllNativeChatsAd
             holder.mera_time.setVisibility(View.INVISIBLE);
 
             holder.uska_msg.setVisibility(View.VISIBLE);
-            holder.uska_image.setVisibility(View.VISIBLE);
+            //holder.uska_image.setVisibility(View.VISIBLE);
             holder.uska_time.setVisibility(View.VISIBLE);
 
             holder.uska_msg.setBackgroundResource(R.drawable.other_user);

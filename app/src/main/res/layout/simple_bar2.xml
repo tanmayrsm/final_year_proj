@@ -8,7 +8,7 @@
     android:layout_height="?attr/actionBarSize"
     android:background="@color/colorPrimary2"
     app:popupTheme="@style/AppTheme"
-    android:id="@+id/simple_toolbar"
+    android:id="@+id/simple_toolbar2"
     >
 
     <ImageView
@@ -24,12 +24,17 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/text_toolbar"
-        android:text="History"
+        android:text="Notifications"
         android:textColor="#FFFFFF"
         style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         android:gravity="center_vertical"/>
 
-
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete_white_24dp"
+        android:layout_marginLeft="220dp"
+        android:padding="2dp"
+        android:id="@+id/del__"/>
 
 </androidx.appcompat.widget.Toolbar>

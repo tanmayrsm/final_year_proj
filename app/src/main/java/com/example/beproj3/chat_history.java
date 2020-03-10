@@ -353,13 +353,15 @@ public class chat_history extends AppCompatActivity
         chatsAdapter = new AllChatsAdapter(chat_history.this,chatlist);
         linearLayoutManager = new LinearLayoutManager(this);
         recyclerViewr.setLayoutManager(linearLayoutManager);
-
         recyclerViewr.setAdapter(chatsAdapter);
+        // recyclerViewr.scrollToPosition(chatlist.size() - 1);
+
 
         ///set native recycler view
         nativeChatsAdapter = new AllNativeChatsAdapter(nativechatlist);
         linearLayoutManager2 = new LinearLayoutManager(this);
         native_recycler.setLayoutManager(linearLayoutManager2);
+        //native_recycler.scrollToPosition(nativechatlist.size() - 1);
 
         native_recycler.setAdapter(nativeChatsAdapter);
 
@@ -444,7 +446,6 @@ public class chat_history extends AppCompatActivity
         String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
         String res = currentDate + " " + currentTime;
-
         UserStatus ui = new UserStatus(res ,status ,firebaseUser.getUid());
 
         df.setValue(ui);
@@ -483,8 +484,6 @@ public class chat_history extends AppCompatActivity
 
         ch_with = findViewById(R.id.uska_naam);
         ch_with.setText(uska_name);
-
-
 
         send_docu = findViewById(R.id.send_doc);
 
@@ -581,8 +580,6 @@ public class chat_history extends AppCompatActivity
             }
         });
 
-
-
         refi = FirebaseDatabase.getInstance().getReference("Call_history").child(mera).child(uskaId);
         refi.addChildEventListener(new ChildEventListener() {
             @Override
@@ -590,10 +587,12 @@ public class chat_history extends AppCompatActivity
                 Chats chat = dataSnapshot.getValue(Chats.class);
                 chatlist.add(chat);
                 chatsAdapter.notifyDataSetChanged();
+                recyclerViewr.scrollToPosition(chatlist.size() -1);
 
                 //add in native recycler view also
                 nativechatlist.add(chat);
                 nativeChatsAdapter.notifyDataSetChanged();
+                native_recycler.scrollToPosition(nativechatlist.size() - 1);
             }
 
             @Override

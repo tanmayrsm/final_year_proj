@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +45,8 @@ public class AllContacts extends AppCompatActivity {
     boolean bullo = false;
     EditText searcho;
 
+    LinearLayout usersi ,sento ,recvo;
+
     //khalti che 4 button
     Button my_contacts ,my_users , sent_acti ,received_acti;
     String my_id ,my_name ,uska_id ,uska_name ,usrname_string ,usrname_string_email;
@@ -52,6 +55,45 @@ public class AllContacts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_contacts);
+
+        usersi =  findViewById(R.id.my_contacts_linear);
+        sento = findViewById(R.id.my_sent_linear);
+        recvo = findViewById(R.id.my_received_linear);
+
+        //my_users tab
+        usersi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bullo = true;
+                Intent i = new Intent(AllContacts.this,MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        sento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bullo = true;
+                Intent i = new Intent(AllContacts.this,AllSent.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        recvo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bullo = true;
+                Intent i = new Intent(AllContacts.this,AllReceived.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+
 
 
 

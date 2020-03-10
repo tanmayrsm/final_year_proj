@@ -10,6 +10,7 @@
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_launcher_background"
         android:id="@+id/profile_img"
+        android:visibility="gone"
         />
 
     <TextView

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".AllNotifications">
 
-    <include layout="@layout/simple_toolbar"/>
+    <include layout="@layout/simple_bar2"/>
 
     <TextView
         android:id="@+id/username_in_allnotifications"
@@ -19,7 +19,8 @@
         android:text="username"
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="gone"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView44"
@@ -29,4 +30,6 @@
         android:layout_marginBottom="100dp"
         android:background="@color/colorPrimaryDark2" />
 
-</RelativeLayout>
+
+
+</LinearLayout>

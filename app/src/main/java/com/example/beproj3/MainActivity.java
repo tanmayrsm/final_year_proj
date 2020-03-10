@@ -32,6 +32,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -110,6 +111,8 @@ public class MainActivity extends AppCompatActivity implements
     private double currentLatitude;
     private double currentLongitude;
 
+    LinearLayout my_con ,sento ,recvo ;
+
 
 
     Button my_contacts ,my_users , sent_acti ,received_acti, no_of_notts;
@@ -125,6 +128,45 @@ public class MainActivity extends AppCompatActivity implements
         toola = findViewById(R.id.mainbaro);
         setSupportActionBar(toola);
         searc = findViewById(R.id.search_btn);
+
+        my_con =  findViewById(R.id.my_users_linear);
+        sento = findViewById(R.id.my_sent_linear);
+        recvo = findViewById(R.id.my_received_linear);
+
+        //my_users tab
+        my_con.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bullap = true;
+                Intent i = new Intent(MainActivity.this,AllContacts.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        sento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bullap = true;
+                Intent i = new Intent(MainActivity.this,AllSent.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        recvo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bullap = true;
+                Intent i = new Intent(MainActivity.this,AllReceived.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+
 
 
 
@@ -203,6 +245,13 @@ public class MainActivity extends AppCompatActivity implements
         not_bell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bullap = true;
+                startActivity(new Intent(MainActivity.this ,AllNotifications.class));
+            }
+        });
+        no_of_notts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 bullap = true;
                 startActivity(new Intent(MainActivity.this ,AllNotifications.class));
             }
@@ -333,7 +382,7 @@ public class MainActivity extends AppCompatActivity implements
 
 
     private void set_no_of_notifications() {
-        no_of_notts.setBackgroundColor(Color.WHITE);
+        //no_of_notts.setBackgroundColor(Color.WHITE);
 
         DatabaseReference refp = FirebaseDatabase.getInstance().getReference("Notifications").child(firebaseUser.getUid());
         refp.child("calling_nott").addValueEventListener(new ValueEventListener() {
@@ -354,7 +403,7 @@ public class MainActivity extends AppCompatActivity implements
                             if(!notts.isSeen()){
                                 no_of_notifications++;
                                 no_of_notts.setText(String.valueOf(no_of_notifications));
-                                no_of_notts.setBackgroundColor(Color.RED);
+                                //no_of_notts.setBackgroundColor(Color.RED);
                                 no_of_notts.setVisibility(View.VISIBLE);
                             }
                             Log.e("Added:", notts.getUid());
@@ -387,7 +436,7 @@ public class MainActivity extends AppCompatActivity implements
                             if(!notts.isSeen()){
                                 no_of_notifications++;
                                 no_of_notts.setText(String.valueOf(no_of_notifications));
-                                no_of_notts.setBackgroundColor(Color.RED);
+                                //no_of_notts.setBackgroundColor(Color.RED);
                                 no_of_notts.setVisibility(View.VISIBLE);
                             }
                             Log.e("Added:", notts.getUid());
@@ -420,7 +469,7 @@ public class MainActivity extends AppCompatActivity implements
                             if(!notts.isSeen()){
                                 no_of_notifications++;
                                 no_of_notts.setText(String.valueOf(no_of_notifications));
-                                no_of_notts.setBackgroundColor(Color.RED);
+                                //no_of_notts.setBackgroundColor(Color.RED);
                                 no_of_notts.setVisibility(View.VISIBLE);
                             }
                             Log.e("Added:", notts.getUid());
@@ -453,7 +502,7 @@ public class MainActivity extends AppCompatActivity implements
                             if(!notts.isSeen()){
                                 no_of_notifications++;
                                 no_of_notts.setText(String.valueOf(no_of_notifications));
-                                no_of_notts.setBackgroundColor(Color.RED);
+                                //no_of_notts.setBackgroundColor(Color.RED);
                                 no_of_notts.setVisibility(View.VISIBLE);
                             }
                             Log.e("Added:", notts.getUid());
@@ -837,7 +886,7 @@ public class MainActivity extends AppCompatActivity implements
         setStatus("online");
 
         no_of_notifications = 0;
-        no_of_notts.setBackgroundColor(Color.WHITE);
+        //no_of_notts.setBackgroundColor(Color.WHITE);
         no_of_notts.setText("");
         no_of_notts.setVisibility(View.GONE);
     }
@@ -885,7 +934,7 @@ public class MainActivity extends AppCompatActivity implements
                 String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
                 String res = currentDate + " " + currentTime;
 
-                Notts n = new Notts(firebaseUser.getUid(),false,res,"busy");
+                Notts n = new Notts(firebaseUser.getUid(),false,res,"Busy user");
 
                 julia2.setValue(n)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {

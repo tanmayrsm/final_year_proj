@@ -5,32 +5,36 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/Cardvu"
-    android:layout_margin="6dp"
-    app:cardElevation="3dp"
-    app:cardCornerRadius="12dp"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="0dp"
     app:contentPadding="4dp"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_height="match_parent"
         android:layout_width="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/LLo">
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="78dp"
             android:layout_height="55dp"
+            android:layout_marginTop="13dp"
+
             android:src="@mipmap/ic_launcher"
             android:id="@+id/itemImage"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="User"
                 android:id="@+id/itemName"
-                android:padding="10dp"
+                android:padding="3dp"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
             <TextView
@@ -38,26 +42,35 @@
                 android:layout_height="wrap_content"
                 android:text="time_called"
                 android:id="@+id/start_time"
-                android:padding="2dp"
-                android:textSize="15sp"/>
+                android:padding="3dp"
+                android:textSize="10sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="duration"
-                android:padding="2dp"
-                android:textSize="15sp"
+                android:padding="3dp"
+                android:textSize="10sp"
                 android:id="@+id/duration"
                 />
         </LinearLayout>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fiber_manual_record_black_24dp"
+            android:id="@+id/online"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"/>
 
         <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/ic_view_message_24dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="80dp"
             android:id="@+id/see_chat2"
             android:background="@drawable/roundcorners"
+            android:layout_gravity="center_vertical"
+
             />
 
     </LinearLayout>

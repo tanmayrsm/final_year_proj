@@ -1,11 +1,13 @@
 package com.example.beproj3;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -41,7 +43,7 @@ public class AllNotifications extends AppCompatActivity {
     ArrayList<Notts> nottsArrayList;
     DatabaseReference reference;
 
-    ImageView top;
+    ImageView top ,delo;
 
     String username_string;
     Toolbar wtg;
@@ -60,10 +62,13 @@ public class AllNotifications extends AppCompatActivity {
         rsv.setHasFixedSize(true);
         rsv.setLayoutManager(new LinearLayoutManager(this));
 
-        wtg = findViewById(R.id.simple_toolbar);
+        wtg = findViewById(R.id.simple_toolbar2);
         setSupportActionBar(wtg);
+        getSupportActionBar().setTitle("");
+
 
         top = findViewById(R.id.dp_back);
+        delo = findViewById(R.id.del__);
 
         top.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +77,51 @@ public class AllNotifications extends AppCompatActivity {
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
                 finish();
+            }
+        });
+
+        delo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseReference rio = FirebaseDatabase.getInstance().getReference("Notifications").child(firebaseUser.getUid());
+                rio.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists()){
+                            AlertDialog alertDialog = new AlertDialog.Builder(AllNotifications.this).create();
+                            alertDialog.setTitle("Clear Notifications ");
+                            alertDialog.setCanceledOnTouchOutside(false);
+                            alertDialog.setMessage("Are you sure to clear all notifications ? ");
+                            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE,"Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                    dataSnapshot.getRef().removeValue();
+                                    Intent i = new Intent(AllNotifications.this ,MainActivity.class);
+                                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    startActivity(i);
+                                    finish();
+                                    Toast.makeText(AllNotifications.this, "All notifications cleared", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                            alertDialog.show();
+                        }else{
+                            Toast.makeText(AllNotifications.this, "No notifications to clear", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
             }
         });
 

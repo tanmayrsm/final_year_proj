@@ -1,19 +1,24 @@
 package com.example.beproj3;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.beproj3.Adapters.AllChatsAdapter;
 import com.example.beproj3.Adapters.AllNativeChatsAdapter;
 import com.example.beproj3.Adapters.AllprevCallsAdapter;
@@ -36,6 +41,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class AllprevMessages extends AppCompatActivity {
 
     RecyclerView recyclerView ,native_recycler;
@@ -45,6 +52,13 @@ public class AllprevMessages extends AppCompatActivity {
     DatabaseReference reference;
     TextView usrname;
 
+    Toolbar bewda;
+    ImageView del_ ,dp_tool ,backo ,loc ,send_;
+    TextView usre ,curr_status;
+    CircleImageView cir;
+
+
+
     private final List<Chats> nativechatlist = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager, linearLayoutManager2;
     private AllChatsAdapter chatsAdapter;
@@ -52,7 +66,7 @@ public class AllprevMessages extends AppCompatActivity {
 
     Switch s2;
 
-    String uska_id ,my_id,start_time ,usrname_string_email;
+    String uska_id ,my_id,start_time ,usrname_string_email ,uska_name ,uska_pic;
     Chats chato;
 
     @Override
@@ -67,9 +81,144 @@ public class AllprevMessages extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         firebaseUser = auth.getCurrentUser();
 
+        //toolbar settings
+        bewda = findViewById(R.id.barprofilee);
+        setSupportActionBar(bewda);
+
+        loc = findViewById(R.id._location);
+        send_ = findViewById(R.id.send_btn);
+        loc.setVisibility(View.INVISIBLE);
+        send_.setVisibility(View.INVISIBLE);
+
+        del_ = findViewById(R.id.del__);
+        usre = findViewById(R.id.text_toolbar);
+        dp_tool = findViewById(R.id.dp_toolbar);
+        curr_status = findViewById(R.id.curr_status);
+        backo = findViewById(R.id._backo);
+
+        getSupportActionBar().setTitle("");
+
+
         Intent intent = getIntent();
         uska_id = intent.getStringExtra("UskaId");
         start_time = intent.getStringExtra("start_time");
+
+        DatabaseReference deaf = FirebaseDatabase.getInstance().getReference("Users").child(uska_id);
+        deaf.child("name").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                uska_name = dataSnapshot.getValue().toString();
+                usre.setText(uska_name);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        deaf.child("image_url").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    Glide.with(getApplicationContext()).load(dataSnapshot.getValue().toString()).into(dp_tool);
+
+                }else{
+                    Glide.with(getApplicationContext()).load(R.drawable.ic_face_black_24dp).into(dp_tool);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        backo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(AllprevMessages.this ,Allpreviouscalls.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+        //set current status
+        DatabaseReference rt = FirebaseDatabase.getInstance().getReference("User_status").child(uska_id);
+        rt.child("status").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.getValue().toString().equals("online")){
+                    curr_status.setText("online");
+                }else{
+                    rt.child("time").addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            curr_status.setText(dataSnapshot.getValue().toString());
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        //del chat hist
+        del_.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseReference refo = FirebaseDatabase.getInstance().getReference("prev_Calls").child(firebaseUser.getUid()).child(start_time);
+                refo.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists()){
+                            AlertDialog alertDialog = new AlertDialog.Builder(AllprevMessages.this).create();
+                            alertDialog.setTitle("Delete chat history with "+uska_name);
+                            alertDialog.setCanceledOnTouchOutside(false);
+                            alertDialog.setMessage("Do you really want to delete this chat history with "+uska_name+" ?");
+                            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE,"Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                    dataSnapshot.getRef().removeValue();
+                                    Intent i = new Intent(AllprevMessages.this ,Allpreviouscalls.class);
+                                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    startActivity(i);
+                                    finish();
+                                }
+                            });
+
+                            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                            alertDialog.show();
+                        }else{
+                            Toast.makeText(AllprevMessages.this, "Chats are empty", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+        });
+
+
+
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

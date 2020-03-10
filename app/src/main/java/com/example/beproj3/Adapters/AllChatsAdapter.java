@@ -111,6 +111,7 @@ public class AllChatsAdapter extends RecyclerView.Adapter<AllChatsAdapter.AllCha
 
 
 
+        //holder.uska_image.setImageDrawable(null);
         DatabaseReference ref2 = FirebaseDatabase.getInstance().getReference("Users").child(id).child("image_url");
 
         ref2.addValueEventListener(new ValueEventListener() {
@@ -118,7 +119,6 @@ public class AllChatsAdapter extends RecyclerView.Adapter<AllChatsAdapter.AllCha
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     uska_img_url = dataSnapshot.getValue().toString();
-
                 }
             }
 
@@ -130,18 +130,18 @@ public class AllChatsAdapter extends RecyclerView.Adapter<AllChatsAdapter.AllCha
 
         //watch 50 no to add image
         holder.uska_msg.setVisibility(View.INVISIBLE);
-        holder.uska_image.setVisibility(View.INVISIBLE);
+        //holder.uska_image.setVisibility(View.INVISIBLE);
         holder.uska_time.setVisibility(View.INVISIBLE);
 
         if(id.equals(firebaseUser.getUid())){
             //its sender
             holder.mera_msg.setBackgroundResource(R.drawable.me_user);
             if(!url.equals("")){
-                holder.mera_msg.setText("PDF");
+                holder.mera_msg.setText("📎"+" PDF");
                 holder.mera_msg.setBackgroundResource(R.drawable.pdf_background);
             }
             else if(type.equals("location")){
-                holder.mera_msg.setText("Location");
+                holder.mera_msg.setText("📌"+" Location");
                 holder.mera_msg.setBackgroundResource(R.drawable.pdf_background);
             }
             else    holder.mera_msg.setText(message);
@@ -159,24 +159,24 @@ public class AllChatsAdapter extends RecyclerView.Adapter<AllChatsAdapter.AllCha
             holder.mera_time.setVisibility(View.INVISIBLE);
 
             holder.uska_msg.setVisibility(View.VISIBLE);
-            holder.uska_image.setVisibility(View.VISIBLE);
+            //holder.uska_image.setVisibility(View.VISIBLE);
             holder.uska_time.setVisibility(View.VISIBLE);
 
             Log.e("Uska img url:",uska_img_url);
 
             if(uska_img_url!=null){
-                    Glide.with(context).load(uska_img_url).into(holder.uska_image);
+                    //Glide.with(context).load(uska_img_url).into(holder.uska_image);
             }
 
 
             else    holder.uska_msg.setBackgroundResource(R.drawable.other_user);
 
             if(!url.equals("")){
-                holder.uska_msg.setText("PDF");
+                holder.uska_msg.setText("📎"+" PDF");
                 holder.uska_msg.setBackgroundResource(R.drawable.pdf_background);
             }
             else if(type.equals("location")){
-                holder.uska_msg.setText("Location");
+                holder.uska_msg.setText("📌"+" Location");
                 holder.uska_msg.setBackgroundResource(R.drawable.pdf_background);
             }
             else    holder.uska_msg.setText(message);
@@ -194,7 +194,7 @@ public class AllChatsAdapter extends RecyclerView.Adapter<AllChatsAdapter.AllCha
             public void onClick(View v) {
                 Log.e("adapter","clicked at "+ position);
 
-                if(holder.mera_msg.getText().toString().equals("PDF")){
+                if(holder.mera_msg.getText().toString().equals("📎"+" PDF")){
                     Intent intent = new Intent();
                     intent.setData(Uri.parse(url));
 
@@ -218,7 +218,7 @@ public class AllChatsAdapter extends RecyclerView.Adapter<AllChatsAdapter.AllCha
 
 
                 }
-                else if(holder.mera_msg.getText().toString().equals("Location")){
+                else if(holder.mera_msg.getText().toString().equals("📌"+" Location")){
                     String[] splitStr = message.split("\\s+");
                     ((chat_history)context).salla(splitStr[0],splitStr[1]);
 
@@ -230,7 +230,7 @@ public class AllChatsAdapter extends RecyclerView.Adapter<AllChatsAdapter.AllCha
             @Override
             public void onClick(View v) {
                 Log.e("adapter","clicked at "+ position);
-                if(holder.uska_msg.getText().toString().equals("PDF")){
+                if(holder.uska_msg.getText().toString().equals("📎"+" PDF")){
                     Intent intent = new Intent();
                     intent.setData(Uri.parse(url));
 
@@ -243,7 +243,7 @@ public class AllChatsAdapter extends RecyclerView.Adapter<AllChatsAdapter.AllCha
 
                 }
 
-                else if(holder.uska_msg.getText().toString().equals("Location")){
+                else if(holder.uska_msg.getText().toString().equals("📌"+" Location")){
                     String[] splitStr = message.split("\\s+");
                     ((chat_history)context).salla(splitStr[0],splitStr[1]);
 

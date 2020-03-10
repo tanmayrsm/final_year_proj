@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -114,6 +115,7 @@ public class AllprevCallsAdapter extends RecyclerView.Adapter<AllprevCallsAdapte
 
     public class AllUsersViewholder extends RecyclerView.ViewHolder {
         TextView user_ka_naam, start_timee, Duration;
+        LinearLayout ll;
 
         ImageButton se_chato;
         CircleImageView prof_image;
@@ -125,11 +127,20 @@ public class AllprevCallsAdapter extends RecyclerView.Adapter<AllprevCallsAdapte
             Duration = itemView.findViewById(R.id.duration);
             prof_image = itemView.findViewById(R.id.itemImage);
             se_chato = itemView.findViewById(R.id.see_chat2);
+            ll = itemView.findViewById(R.id.LLo);
+
 
             //see chat on click listener
             se_chato.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    prevCalls prev = prevArrayList.get(getAdapterPosition());
+                    ((Allpreviouscalls) context).viewMessage(prev);
+                }
+            });
+            ll.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
                     prevCalls prev = prevArrayList.get(getAdapterPosition());
                     ((Allpreviouscalls) context).viewMessage(prev);
                 }

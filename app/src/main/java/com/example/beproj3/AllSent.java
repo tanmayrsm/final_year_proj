@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +49,7 @@ public class AllSent extends AppCompatActivity {
     EditText searcho;
 
 
+    LinearLayout usersi ,contacts ,recvo;
     //khalti che 4 button
     Button my_contacts ,my_users , sent_acti ,received_acti;
     String my_id ,my_name ,uska_id ,uska_name ,usrname_string ,usrname_string_email;
@@ -56,6 +58,44 @@ public class AllSent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_sent);
+
+        usersi =  findViewById(R.id.my_contacts_linear);
+        contacts = findViewById(R.id.my_users_linear);
+        recvo = findViewById(R.id.my_received_linear);
+
+        //my_users tab
+        usersi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bullo = true;
+                Intent i = new Intent(AllSent.this,MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        contacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bullo = true;
+                Intent i = new Intent(AllSent.this,AllContacts.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        recvo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bullo = true;
+                Intent i = new Intent(AllSent.this,AllReceived.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
 
         searcho = findViewById(R.id.search);
 
