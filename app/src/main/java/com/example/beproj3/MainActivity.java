@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements
     boolean lagau = true;
     Toolbar toola;
     EditText searcho;
+    TextView nono;
 
     private Vibrator vib;
     private MediaPlayer mp;
@@ -124,6 +125,8 @@ public class MainActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        nono = findViewById(R.id.no_contacts);
 
         toola = findViewById(R.id.mainbaro);
         setSupportActionBar(toola);
@@ -166,8 +169,6 @@ public class MainActivity extends AppCompatActivity implements
                 finish();
             }
         });
-
-
 
 
         searcho = findViewById(R.id.search);
@@ -542,10 +543,18 @@ public class MainActivity extends AppCompatActivity implements
 
                             userArrayList.add(user);
 
+
                             Log.e("MyCOntact1:",userArrayList.toString());
                             AllUsersAdapter adapter = new AllUsersAdapter(MainActivity.this ,userArrayList);
                             recyclerView.setAdapter(adapter);
                             adapter.notifyDataSetChanged();
+
+                            if(userArrayList.size() == 0){
+                                recyclerView.setVisibility(View.GONE);
+                                nono.setVisibility(View.VISIBLE);
+                            }else{
+                                nono.setVisibility(View.GONE);
+                            }
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -554,6 +563,7 @@ public class MainActivity extends AppCompatActivity implements
                     });
                     Log.e("Main all contacts:",userArrayList.toString());
                 }
+
             }
 
             @Override
@@ -614,6 +624,7 @@ public class MainActivity extends AppCompatActivity implements
                             AllUsersAdapter adapter = new AllUsersAdapter(MainActivity.this ,userArrayList);
                             recyclerView.setAdapter(adapter);
                             adapter.notifyDataSetChanged();
+
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -622,6 +633,7 @@ public class MainActivity extends AppCompatActivity implements
                     });
                     Log.e("Main all contacts:",userArrayList.toString());
                 }
+
             }
 
             @Override
@@ -761,6 +773,11 @@ public class MainActivity extends AppCompatActivity implements
         else if(item.getItemId() == R.id.emergency){
             bullap = true;
             startActivity(new Intent(MainActivity.this ,Emergency.class));
+        }
+        else if(item.getItemId() == R.id.prod_search){
+            bullap = true;
+            startActivity(new Intent(MainActivity.this ,objo_brief_desc.class
+            ));
         }
         return super.onOptionsItemSelected(item);
     }

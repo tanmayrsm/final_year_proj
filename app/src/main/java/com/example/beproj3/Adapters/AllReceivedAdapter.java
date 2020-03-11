@@ -103,6 +103,8 @@ public class AllReceivedAdapter extends RecyclerView.Adapter<AllReceivedAdapter.
                     User user = userArrayList.get(getAdapterPosition());
 
                     accepts.setText("Request Accepted");
+                    accepts.setTextColor(Color.BLACK);
+                    reject.setVisibility(View.GONE);
                     accepts.setEnabled(false);
                     accepts.setBackgroundColor(Color.WHITE);
                     auth = FirebaseAuth.getInstance();
@@ -191,6 +193,7 @@ public class AllReceivedAdapter extends RecyclerView.Adapter<AllReceivedAdapter.
                     accepts.setText("Request Rejected");
                     accepts.setEnabled(false);
                     accepts.setBackgroundColor(Color.WHITE);
+                    accepts.setTextColor(Color.BLACK);
 
                     reject.setVisibility(View.GONE);
 

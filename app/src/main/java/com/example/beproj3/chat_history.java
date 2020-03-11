@@ -91,7 +91,7 @@ public class chat_history extends AppCompatActivity
 {
     //private static final String LOG_TAG = "chat_history" ;
     RecyclerView recyclerViewr ,native_recycler;
-    TextView ch_with ,usro;
+    TextView ch_with ,nono;
     Switch s2;
     FirebaseUser firebaseUser;
     StorageReference storageReference;

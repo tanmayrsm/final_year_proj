@@ -39,7 +39,7 @@ public class Allpreviouscalls extends AppCompatActivity {
     FirebaseUser firebaseUser;
     ArrayList<User> userArrayList;
     DatabaseReference reference;
-    TextView usrname;
+    TextView usrname ,nono;
     LinearLayout ll;
 
     ImageView top;
@@ -51,6 +51,8 @@ public class Allpreviouscalls extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_allpreviouscalls);
+
+        nono = findViewById(R.id.no_contacts);
 
         recyclerView = findViewById(R.id.recyclerView45);
         usrname = findViewById(R.id.username_in_allprevious);
@@ -124,7 +126,13 @@ public class Allpreviouscalls extends AppCompatActivity {
                 prevArrayList.clear();
 
                 if(!dataSnapshot.exists()){
-                    Toast.makeText(Allpreviouscalls.this, "No users registered", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(Allpreviouscalls.this, "No users registered", Toast.LENGTH_SHORT).show();
+                    if(prevArrayList.size() == 0){
+                        recyclerView.setVisibility(View.GONE);
+                        nono.setVisibility(View.VISIBLE);
+                    }else{
+                        nono.setVisibility(View.GONE);
+                    }
                     return;
                 }
                 Log.e("all prev efore","prevarraylist:"+prevArrayList.toString());
@@ -138,6 +146,8 @@ public class Allpreviouscalls extends AppCompatActivity {
                         prevArrayList.add(prevcalls);
                         Log.e("Added:",prevcalls.getUid());
                     }
+
+
 
                     AllprevCallsAdapter adapter = new AllprevCallsAdapter(Allpreviouscalls.this ,prevArrayList);
                     recyclerView.setAdapter(adapter);

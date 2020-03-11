@@ -40,11 +40,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/button_connect"
                 android:text="Accept"
                 android:textAllCaps="false"
                 android:textColor="@color/common_google_signin_btn_text_dark_pressed"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -53,12 +53,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="48dp"
             android:background="@color/colorAccent"
             android:text="Reject"
             android:textAllCaps="false"
             android:textColor="@color/common_google_signin_btn_text_dark_default"
-            android:textSize="16sp" />
+            android:textSize="12sp" />
 
         <ImageButton
             android:layout_width="25dp"

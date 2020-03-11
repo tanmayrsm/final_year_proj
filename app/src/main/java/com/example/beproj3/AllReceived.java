@@ -41,7 +41,7 @@ public class AllReceived extends AppCompatActivity {
     FirebaseUser firebaseUser;
     ArrayList<User> userArrayList;
     DatabaseReference reference;
-    TextView usrname;
+    TextView usrname ,nono;
     boolean bullo = false;
     EditText searcho;
 
@@ -55,6 +55,8 @@ public class AllReceived extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_received);
+
+        nono = findViewById(R.id.no_contacts);
 
         usersi =  findViewById(R.id.my_contacts_linear);
         sento = findViewById(R.id.my_sent_linear);
@@ -282,6 +284,15 @@ public class AllReceived extends AppCompatActivity {
                             AllReceivedAdapter adapter = new AllReceivedAdapter(AllReceived.this ,userArrayList);
                             recyclerView.setAdapter(adapter);
                             adapter.notifyDataSetChanged();
+
+                            if(userArrayList.size() == 0){
+                                recyclerView.setVisibility(View.GONE);
+                                nono.setVisibility(View.VISIBLE);
+                            }else{
+                                nono.setVisibility(View.GONE);
+                            }
+                            Log.e("all recv",String.valueOf(userArrayList.size()));
+
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {

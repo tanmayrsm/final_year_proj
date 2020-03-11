@@ -36,7 +36,7 @@ import java.util.Locale;
 
 public class AllNotifications extends AppCompatActivity {
     RecyclerView rsv ;
-    TextView username;
+    TextView username ,nono;
 
     FirebaseAuth auth;
     FirebaseUser firebaseUser;
@@ -52,6 +52,8 @@ public class AllNotifications extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_notifications);
+
+        nono = findViewById(R.id.no_contacts);
 
         rsv = findViewById(R.id.recyclerView44);
         username = findViewById(R.id.username_in_allnotifications);
@@ -191,6 +193,8 @@ public class AllNotifications extends AppCompatActivity {
                         AllNotificationsAdapter adapter = new AllNotificationsAdapter(AllNotifications.this, nottsArrayList);
                         rsv.setAdapter(adapter);
                         adapter.notifyDataSetChanged();
+
+
                     }
                 }
                 //Log.e("all contacts","userarraylist:"+userArrayList.toString());
@@ -209,7 +213,9 @@ public class AllNotifications extends AppCompatActivity {
 
 
                 if(!dataSnapshot.exists()){
-                    Toast.makeText(AllNotifications.this, "No notts for busy", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(AllNotifications.this, "No notts for busy", Toast.LENGTH_SHORT).show();
+                    rsv.setVisibility(View.GONE);
+                    nono.setVisibility(View.VISIBLE);
                     return;
                 }
                 // Log.e("all contacts efore","userarraylist:"+userArrayList.toString());

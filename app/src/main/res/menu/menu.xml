@@ -17,4 +17,8 @@
         android:id="@+id/emergency"
         android:title="Emergency"/>
 
+    <item
+        android:id="@+id/prod_search"
+        android:title="Product"/>
+
 </menu>

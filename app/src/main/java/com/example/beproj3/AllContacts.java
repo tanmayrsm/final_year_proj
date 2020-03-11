@@ -41,7 +41,7 @@ public class AllContacts extends AppCompatActivity {
     FirebaseUser firebaseUser;
     ArrayList<User> userArrayList;
     DatabaseReference reference;
-    TextView usrname;
+    TextView usrname ,nono;
     boolean bullo = false;
     EditText searcho;
 
@@ -55,6 +55,8 @@ public class AllContacts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_contacts);
+
+        nono = findViewById(R.id.no_contacts);
 
         usersi =  findViewById(R.id.my_contacts_linear);
         sento = findViewById(R.id.my_sent_linear);
@@ -216,6 +218,13 @@ public class AllContacts extends AppCompatActivity {
                         if(user.getName().toLowerCase().contains(toString.toLowerCase()))
                             userArrayList.add(user);
                         Log.e("Added:",user.getEmail());
+                    }
+
+                    if(userArrayList.size() == 0){
+                        recyclerView.setVisibility(View.GONE);
+                        nono.setVisibility(View.VISIBLE);
+                    }else{
+                        nono.setVisibility(View.GONE);
                     }
 
                     AllContactsAdapter adapter = new AllContactsAdapter(AllContacts.this ,userArrayList);

@@ -48,6 +48,8 @@ public class AllSent extends AppCompatActivity {
     boolean bullo = false;
     EditText searcho;
 
+    TextView nono;
+
 
     LinearLayout usersi ,contacts ,recvo;
     //khalti che 4 button
@@ -58,6 +60,8 @@ public class AllSent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_sent);
+
+        nono = findViewById(R.id.no_contacts);
 
         usersi =  findViewById(R.id.my_contacts_linear);
         contacts = findViewById(R.id.my_users_linear);
@@ -228,9 +232,6 @@ public class AllSent extends AppCompatActivity {
 
                     Log.e("Sending2:",userArrayList.toString());
                 }
-
-
-
             }
 
             @Override
@@ -298,6 +299,14 @@ public class AllSent extends AppCompatActivity {
                             AllSentAdapter adapter = new AllSentAdapter(AllSent.this ,userArrayList);
                             recyclerView.setAdapter(adapter);
                             adapter.notifyDataSetChanged();
+
+                            if(userArrayList.size() == 0){
+                                recyclerView.setVisibility(View.GONE);
+                                nono.setVisibility(View.VISIBLE);
+                            }else{
+                                nono.setVisibility(View.GONE);
+                            }
+                            Log.e("all sent",String.valueOf(userArrayList.size()));
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {

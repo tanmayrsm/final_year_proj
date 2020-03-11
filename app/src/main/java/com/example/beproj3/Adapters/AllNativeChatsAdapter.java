@@ -88,6 +88,8 @@ public class AllNativeChatsAdapter extends RecyclerView.Adapter<AllNativeChatsAd
         String time = chat.getTime();
         String message = chat.getChat();
         String type = chat.getType();
+        String url = chat.getUrl();
+
 
         //watch 50 no to add image
         holder.uska_msg.setVisibility(View.INVISIBLE);
@@ -96,139 +98,155 @@ public class AllNativeChatsAdapter extends RecyclerView.Adapter<AllNativeChatsAd
 
         if(id.equals(firebaseUser.getUid())){
             //its sender
-            holder.mera_msg.setBackgroundResource(R.drawable.me_user);
+            //holder.mera_msg.setBackgroundResource(R.drawable.me_user);
 
             // native me chahiye ki apne language me aye
 
-
-            holder.mera_msg.setText(message);
+            //holder.mera_msg.setText(message);
 //            identifyLanguage(message);
-            FirebaseLanguageIdentification identifier = FirebaseNaturalLanguage.getInstance()
-                    .getLanguageIdentification();
 
-            identifier.identifyLanguage(message).addOnSuccessListener(new OnSuccessListener<String>() {
-                @Override
-                public void onSuccess(String s) {
-                    if (s.equals("und")){
-                        Toast.makeText(getApplicationContext(),"Language Not Identified", Toast.LENGTH_SHORT).show();
-                        holder.mera_msg.setText(message);
-                    }
-                    else {
-//                        getLanguageCode(s);
-                        int langCode;
-                        switch (s){
-                            case "hi":
-                                langCode = FirebaseTranslateLanguage.HI;
-                                //mSourceLang.setText("Hindi");
-                                break;
-                            case "mr":
-                                langCode = FirebaseTranslateLanguage.MR;
-                                //mSourceLang.setText("Marathi");
 
-                                break;
-                            case "bn":
-                                langCode = FirebaseTranslateLanguage.BN;
-                                //mSourceLang.setText("Bengali");
-                                break;
 
-                            case "ta":
-                                langCode = FirebaseTranslateLanguage.TA;
-                                //mSourceLang.setText("Tamil");
-                                break;
 
-                            case "te":
-                                langCode = FirebaseTranslateLanguage.TE;
-                                //mSourceLang.setText("Telugu");
-                                break;
-
-                            case "en":
-                                langCode = FirebaseTranslateLanguage.EN;
-                                //mSourceLang.setText("English ha");
-
-                                break;
-                            default:
-                                langCode = 0;
+            ///
+            //its sender
+            holder.mera_msg.setBackgroundResource(R.drawable.me_user);
+            if(type.equals("pdf")){
+                holder.mera_msg.setText("📎"+" PDF");
+                holder.mera_msg.setBackgroundResource(R.drawable.pdf_background);
+            }
+            else if(type.equals("location")){
+                holder.mera_msg.setText("📌"+" Location");
+                holder.mera_msg.setBackgroundResource(R.drawable.pdf_background);
+            }
+            else    {
+                holder.mera_msg.setText(message);
+                FirebaseLanguageIdentification identifier = FirebaseNaturalLanguage.getInstance()
+                        .getLanguageIdentification();
+                identifier.identifyLanguage(message).addOnSuccessListener(new OnSuccessListener<String>() {
+                    @Override
+                    public void onSuccess(String s) {
+                        if (s.equals("und")){
+                            Toast.makeText(getApplicationContext(),"Language Not Identified", Toast.LENGTH_SHORT).show();
+                            holder.mera_msg.setText(message);
                         }
+                        else {
+//                        getLanguageCode(s);
+                            int langCode;
+                            switch (s){
+                                case "hi":
+                                    langCode = FirebaseTranslateLanguage.HI;
+                                    //mSourceLang.setText("Hindi");
+                                    break;
+                                case "mr":
+                                    langCode = FirebaseTranslateLanguage.MR;
+                                    //mSourceLang.setText("Marathi");
+
+                                    break;
+                                case "bn":
+                                    langCode = FirebaseTranslateLanguage.BN;
+                                    //mSourceLang.setText("Bengali");
+                                    break;
+
+                                case "ta":
+                                    langCode = FirebaseTranslateLanguage.TA;
+                                    //mSourceLang.setText("Tamil");
+                                    break;
+
+                                case "te":
+                                    langCode = FirebaseTranslateLanguage.TE;
+                                    //mSourceLang.setText("Telugu");
+                                    break;
+
+                                case "en":
+                                    langCode = FirebaseTranslateLanguage.EN;
+                                    //mSourceLang.setText("English ha");
+
+                                    break;
+                                default:
+                                    langCode = 0;
+                            }
 //                        translateText()
 
-                        DatabaseReference fbcode = FirebaseDatabase.getInstance().getReference().child("Users").child(firebaseUser.getUid()).child("fb_val");
-                        fbcode.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                String fb_code = dataSnapshot.getValue().toString();
-                                int to = 0;
-                                switch (fb_code){
-                                    case "hi":
-                                        to = FirebaseTranslateLanguage.HI;
-                                        //mSourceLang.setText("Hindi");
-                                        break;
-                                    case "mr":
-                                        to = FirebaseTranslateLanguage.MR;
-                                        //mSourceLang.setText("Marathi");
+                            DatabaseReference fbcode = FirebaseDatabase.getInstance().getReference().child("Users").child(firebaseUser.getUid()).child("fb_val");
+                            fbcode.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    String fb_code = dataSnapshot.getValue().toString();
+                                    int to = 0;
+                                    switch (fb_code){
+                                        case "hi":
+                                            to = FirebaseTranslateLanguage.HI;
+                                            //mSourceLang.setText("Hindi");
+                                            break;
+                                        case "mr":
+                                            to = FirebaseTranslateLanguage.MR;
+                                            //mSourceLang.setText("Marathi");
 
-                                        break;
-                                    case "bn":
-                                        to = FirebaseTranslateLanguage.BN;
-                                        //mSourceLang.setText("Bengali");
-                                        break;
+                                            break;
+                                        case "bn":
+                                            to = FirebaseTranslateLanguage.BN;
+                                            //mSourceLang.setText("Bengali");
+                                            break;
 
-                                    case "ta":
-                                        to = FirebaseTranslateLanguage.TA;
-                                        //mSourceLang.setText("Tamil");
-                                        break;
+                                        case "ta":
+                                            to = FirebaseTranslateLanguage.TA;
+                                            //mSourceLang.setText("Tamil");
+                                            break;
 
-                                    case "te":
-                                        to = FirebaseTranslateLanguage.TE;
-                                        //mSourceLang.setText("Telugu");
-                                        break;
+                                        case "te":
+                                            to = FirebaseTranslateLanguage.TE;
+                                            //mSourceLang.setText("Telugu");
+                                            break;
 
-                                    case "en":
-                                        to = FirebaseTranslateLanguage.EN;
-                                        //mSourceLang.setText("English ha");
+                                        case "en":
+                                            to = FirebaseTranslateLanguage.EN;
+                                            //mSourceLang.setText("English ha");
 
-                                        break;
-                                    default:
-                                        to = 0;
+                                            break;
+                                        default:
+                                            to = 0;
+                                    }
+
+                                    FirebaseTranslatorOptions options = new FirebaseTranslatorOptions.Builder()
+                                            //from language
+                                            .setSourceLanguage(langCode)
+                                            // to language
+                                            .setTargetLanguage(to)
+                                            .build();
+
+                                    final FirebaseTranslator translator = FirebaseNaturalLanguage.getInstance()
+                                            .getTranslator(options);
+
+                                    FirebaseModelDownloadConditions conditions = new FirebaseModelDownloadConditions.Builder()
+                                            .build();
+
+                                    translator.downloadModelIfNeeded(conditions).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void aVoid) {
+                                            translator.translate(message).addOnSuccessListener(new OnSuccessListener<String>() {
+                                                @Override
+                                                public void onSuccess(String s) {
+                                                    holder.mera_msg.setText(s);
+                                                }
+                                            });
+                                        }
+                                    });
+
                                 }
 
-                                FirebaseTranslatorOptions options = new FirebaseTranslatorOptions.Builder()
-                                        //from language
-                                        .setSourceLanguage(langCode)
-                                        // to language
-                                        .setTargetLanguage(to)
-                                        .build();
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                                final FirebaseTranslator translator = FirebaseNaturalLanguage.getInstance()
-                                        .getTranslator(options);
-
-                                FirebaseModelDownloadConditions conditions = new FirebaseModelDownloadConditions.Builder()
-                                        .build();
-
-                                translator.downloadModelIfNeeded(conditions).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void aVoid) {
-                                        translator.translate(message).addOnSuccessListener(new OnSuccessListener<String>() {
-                                            @Override
-                                            public void onSuccess(String s) {
-                                                holder.mera_msg.setText(s);
-                                            }
-                                        });
-                                    }
-                                });
-
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
+                                }
+                            });
 
 
+                        }
                     }
-                }
-            });
+                });
 
+            }
             try {
                 holder.mera_time.setText(datto(time));
             } catch (ParseException e) {
@@ -244,144 +262,161 @@ public class AllNativeChatsAdapter extends RecyclerView.Adapter<AllNativeChatsAd
             holder.uska_time.setVisibility(View.VISIBLE);
 
             holder.uska_msg.setBackgroundResource(R.drawable.other_user);
-            holder.uska_msg.setText(message);
+            //holder.uska_msg.setText(message);
 
-            //       identifyLanguage(message);
-            FirebaseLanguageIdentification identifier = FirebaseNaturalLanguage.getInstance()
-                    .getLanguageIdentification();
 
-            identifier.identifyLanguage(message).addOnSuccessListener(new OnSuccessListener<String>() {
-                @Override
-                public void onSuccess(String s) {
-                    if (s.equals("und")){
-                        Toast.makeText(getApplicationContext(),"Language Not Identified", Toast.LENGTH_SHORT).show();
-                        holder.mera_msg.setText(message);
-                    }
-                    else {
-                        //Log.e(LOG_TAG ,"Message hai: "+message);
-                        //Log.e(LOG_TAG,"Else me h and doing from - "+ s);
-//                      getLanguageCode(s);
-                        int langCode;
-                        switch (s){
-                            case "hi":
-                                langCode = FirebaseTranslateLanguage.HI;
-                                //mSourceLang.setText("Hindi");
-                                break;
-                            case "mr":
-                                langCode = FirebaseTranslateLanguage.MR;
-                                //mSourceLang.setText("Marathi");
 
-                                break;
-                            case "bn":
-                                langCode = FirebaseTranslateLanguage.BN;
-                                //mSourceLang.setText("Bengali");
-                                break;
 
-                            case "ta":
-                                langCode = FirebaseTranslateLanguage.TA;
-                                //mSourceLang.setText("Tamil");
-                                break;
+            if(type.equals("pdf")){
+                holder.uska_msg.setText("📎"+" PDF");
+                holder.uska_msg.setBackgroundResource(R.drawable.pdf_background);
+            }
+            else if(type.equals("location")){
+                holder.uska_msg.setText("📌"+" Location");
+                holder.uska_msg.setBackgroundResource(R.drawable.pdf_background);
+            }
+            else   {
+                holder.uska_msg.setText(message);
 
-                            case "te":
-                                langCode = FirebaseTranslateLanguage.TE;
-                                //mSourceLang.setText("Telugu");
-                                break;
+                //       identifyLanguage(message);
+                FirebaseLanguageIdentification identifier = FirebaseNaturalLanguage.getInstance()
+                        .getLanguageIdentification();
 
-                            case "en":
-                                langCode = FirebaseTranslateLanguage.EN;
-                                //mSourceLang.setText("English ha");
-
-                                break;
-                            default:
-                                langCode = 0;
+                identifier.identifyLanguage(message).addOnSuccessListener(new OnSuccessListener<String>() {
+                    @Override
+                    public void onSuccess(String s) {
+                        if (s.equals("und")){
+                            Toast.makeText(getApplicationContext(),"Language Not Identified", Toast.LENGTH_SHORT).show();
+                            holder.mera_msg.setText(message);
                         }
+                        else {
+                            //Log.e(LOG_TAG ,"Message hai: "+message);
+                            //Log.e(LOG_TAG,"Else me h and doing from - "+ s);
+//                      getLanguageCode(s);
+                            int langCode;
+                            switch (s){
+                                case "hi":
+                                    langCode = FirebaseTranslateLanguage.HI;
+                                    //mSourceLang.setText("Hindi");
+                                    break;
+                                case "mr":
+                                    langCode = FirebaseTranslateLanguage.MR;
+                                    //mSourceLang.setText("Marathi");
+
+                                    break;
+                                case "bn":
+                                    langCode = FirebaseTranslateLanguage.BN;
+                                    //mSourceLang.setText("Bengali");
+                                    break;
+
+                                case "ta":
+                                    langCode = FirebaseTranslateLanguage.TA;
+                                    //mSourceLang.setText("Tamil");
+                                    break;
+
+                                case "te":
+                                    langCode = FirebaseTranslateLanguage.TE;
+                                    //mSourceLang.setText("Telugu");
+                                    break;
+
+                                case "en":
+                                    langCode = FirebaseTranslateLanguage.EN;
+                                    //mSourceLang.setText("English ha");
+
+                                    break;
+                                default:
+                                    langCode = 0;
+                            }
 //                        translateText()
 
-                        DatabaseReference fbcode = FirebaseDatabase.getInstance().getReference().child("Users").child(firebaseUser.getUid()).child("fb_val");
-                        fbcode.addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                String fb_code = dataSnapshot.getValue().toString();
-                                //Log.e(LOG_TAG,"ELse me h and doing to - "+ fb_code);
-                                int to;
-                                switch (fb_code){
-                                    case "hi":
-                                        to = FirebaseTranslateLanguage.HI;
-                                        //mSourceLang.setText("Hindi");
-                                        break;
-                                    case "mr":
-                                        to = FirebaseTranslateLanguage.MR;
-                                        //mSourceLang.setText("Marathi");
+                            DatabaseReference fbcode = FirebaseDatabase.getInstance().getReference().child("Users").child(firebaseUser.getUid()).child("fb_val");
+                            fbcode.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    String fb_code = dataSnapshot.getValue().toString();
+                                    //Log.e(LOG_TAG,"ELse me h and doing to - "+ fb_code);
+                                    int to;
+                                    switch (fb_code){
+                                        case "hi":
+                                            to = FirebaseTranslateLanguage.HI;
+                                            //mSourceLang.setText("Hindi");
+                                            break;
+                                        case "mr":
+                                            to = FirebaseTranslateLanguage.MR;
+                                            //mSourceLang.setText("Marathi");
 
-                                        break;
-                                    case "bn":
-                                        to = FirebaseTranslateLanguage.BN;
-                                        //mSourceLang.setText("Bengali");
-                                        break;
+                                            break;
+                                        case "bn":
+                                            to = FirebaseTranslateLanguage.BN;
+                                            //mSourceLang.setText("Bengali");
+                                            break;
 
-                                    case "ta":
-                                        to = FirebaseTranslateLanguage.TA;
-                                        //mSourceLang.setText("Tamil");
-                                        break;
+                                        case "ta":
+                                            to = FirebaseTranslateLanguage.TA;
+                                            //mSourceLang.setText("Tamil");
+                                            break;
 
-                                    case "te":
-                                        to = FirebaseTranslateLanguage.TE;
-                                        //mSourceLang.setText("Telugu");
-                                        break;
+                                        case "te":
+                                            to = FirebaseTranslateLanguage.TE;
+                                            //mSourceLang.setText("Telugu");
+                                            break;
 
-                                    case "en":
-                                        to = FirebaseTranslateLanguage.EN;
-                                        //mSourceLang.setText("English ha");
+                                        case "en":
+                                            to = FirebaseTranslateLanguage.EN;
+                                            //mSourceLang.setText("English ha");
 
-                                        break;
-                                    default:
-                                        to = 0;
-                                }
+                                            break;
+                                        default:
+                                            to = 0;
+                                    }
 
-                                FirebaseTranslatorOptions options = new FirebaseTranslatorOptions.Builder()
-                                        //from language
-                                        .setSourceLanguage(langCode)
-                                        // to language
-                                        .setTargetLanguage(to)
-                                        .build();
+                                    FirebaseTranslatorOptions options = new FirebaseTranslatorOptions.Builder()
+                                            //from language
+                                            .setSourceLanguage(langCode)
+                                            // to language
+                                            .setTargetLanguage(to)
+                                            .build();
 
-                                final FirebaseTranslator translator = FirebaseNaturalLanguage.getInstance()
-                                        .getTranslator(options);
+                                    final FirebaseTranslator translator = FirebaseNaturalLanguage.getInstance()
+                                            .getTranslator(options);
 
-                                FirebaseModelDownloadConditions conditions = new FirebaseModelDownloadConditions.Builder()
-                                        .build();
+                                    FirebaseModelDownloadConditions conditions = new FirebaseModelDownloadConditions.Builder()
+                                            .build();
 
-                                translator.downloadModelIfNeeded(conditions).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void aVoid) {
-                                        translator.translate(message).addOnSuccessListener(new OnSuccessListener<String>() {
-                                            @Override
-                                            public void onSuccess(String s) {
+                                    translator.downloadModelIfNeeded(conditions).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void aVoid) {
+                                            translator.translate(message).addOnSuccessListener(new OnSuccessListener<String>() {
+                                                @Override
+                                                public void onSuccess(String s) {
 //                                                Log.e(LOG_TAG , "message :"+message);
 //                                                Log.e(LOG_TAG , "from - to :"+fb_code + " ");
 //                                                Log.e(LOG_TAG ,"converted: "+s);
-                                                holder.uska_msg.setText(s);
+                                                    holder.uska_msg.setText(s);
 
-                                                //String j = holder.mera_msg.getText().toString();
+                                                    //String j = holder.mera_msg.getText().toString();
 
-                                                //Log.e(LOG_TAG,"set kiyela:"+holder.mera_msg.getText().toString());;
+                                                    //Log.e(LOG_TAG,"set kiyela:"+holder.mera_msg.getText().toString());;
 
-                                                //holder.mera_msg.setText(j);
-                                            }
-                                        });
-                                    }
-                                });
-                            }
+                                                    //holder.mera_msg.setText(j);
+                                                }
+                                            });
+                                        }
+                                    });
+                                }
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                            }
+                                }
 
-                        });
+                            });
+                        }
                     }
-                }
-            });
+                });
+
+            }
+
 
             try {
                 holder.uska_time.setText(datto(time));

@@ -22,6 +22,7 @@ import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.IOException;
 
@@ -29,7 +30,7 @@ public class ocr extends AppCompatActivity {
     SurfaceView s;
     TextView tv;
     CameraSource cameraSource;
-    Button b;
+    FloatingActionButton b;
     final int RequestCameraPermissionID = 1001;
 
     @Override

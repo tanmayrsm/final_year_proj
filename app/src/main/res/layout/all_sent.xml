@@ -42,10 +42,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:background="#F9050E"
-                android:text="DELETE REQUEST"
+                android:text="Delete Req"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
 
