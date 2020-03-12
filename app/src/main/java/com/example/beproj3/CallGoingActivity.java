@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -91,6 +92,8 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
     TextView connected_name ,first_txtvu;
 
     SinchClient sinchClient;
+    Dialog call_him ,receive_him;
+
 
     private static final int REQUEST_RECORD_PERMISSION = 100;
     private int maxLinesInput = 10;
@@ -198,7 +201,7 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
             }
         });
 
-        Toast.makeText(this, "My lang name:"+my_lang_name, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "My lang name:"+my_lang_name, Toast.LENGTH_SHORT).show();
 
         //get user name and set 'connected to' :on screen
         DatabaseReference usr = FirebaseDatabase.getInstance().getReference()
@@ -418,7 +421,7 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
                 hist.child(firebaseUser.getUid()).child(start_time).updateChildren(result);
                 hist2.child(phone_karne_wale_ka_id).child(start_time).updateChildren(result);
 
-                Toast.makeText(CallGoingActivity.this, "Call ended", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(CallGoingActivity.this, "Call ended", Toast.LENGTH_SHORT).show();
                 if (call != null)
                     call.hangup();
                 else if (call == null){
@@ -743,14 +746,14 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
 
                             if(!s1.isChecked())
                             {
-                                Toast.makeText(CallGoingActivity.this, "aaya re else if me", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(CallGoingActivity.this, "aaya re else if me", Toast.LENGTH_SHORT).show();
                                 result.setText(dataSnapshot.getValue().toString());
                                 identifyLanguage("en");
                             }
 
                             else if(s1.isChecked())
                             {
-                                Toast.makeText(CallGoingActivity.this, "aaya re else if me", Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(CallGoingActivity.this, "aaya re else if me", Toast.LENGTH_SHORT).show();
                                 result.setText(dataSnapshot.getValue().toString());
                                 DatabaseReference fbcode = FirebaseDatabase.getInstance().getReference().child("Users").child(firebaseUser.getUid()).child("fb_val");
                                 fbcode.addValueEventListener(new ValueEventListener() {
@@ -821,7 +824,7 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
     }
 
     public void start(String code){
-        Toast.makeText(this, "Lang ayi h :" + code, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "Lang ayi h :" + code, Toast.LENGTH_SHORT).show();
         progressBar.setVisibility(View.INVISIBLE);
         speech = SpeechRecognizer.createSpeechRecognizer(this);
         Log.i(LOG_TAG, "isRecognitionAvailable: " + SpeechRecognizer.isRecognitionAvailable(this));
@@ -854,7 +857,7 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 my_lang_code = dataSnapshot.getValue().toString();
-                Toast.makeText(CallGoingActivity.this, "ALLLLL IN :"+my_lang_code, Toast.LENGTH_SHORT).show();
+               // Toast.makeText(CallGoingActivity.this, "ALLLLL IN :"+my_lang_code, Toast.LENGTH_SHORT).show();
                 recognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE ,my_lang_code );
 
             }

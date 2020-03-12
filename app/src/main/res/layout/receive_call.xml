@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="490dp"
+    android:background="#FFFFFF"
+    android:padding="5dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Call From"
+            android:textColor="#000000"
+            android:id="@+id/lop"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Object name"
+            android:textColor="#000000"
+            android:id="@+id/obj_name"/>
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/uska_img"
+        android:src="@drawable/ic_person_black_24dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="1dp"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/busy"
+            android:text="I'm Busy"
+            android:background="@drawable/button_friend2"
+            android:textAllCaps="false"
+            android:textSize="11sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/call_me_later"
+            android:text="Call me later"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/button_friend2"
+            android:textSize="11sp"
+            android:textAllCaps="false"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_friend2"
+            android:textSize="11sp"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/i_will_call"
+            android:text="I'll call you shortly"
+            android:textAllCaps="false"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:padding="10dp">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/pick"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:textColor="@color/blue"
+        android:text="HangUp"
+        android:padding="10dp"
+        android:layout_marginLeft="40dp"
+        android:textStyle="bold"
+        android:src="@drawable/ic_call_black_24dp"
+        android:background="@drawable/roundcorners4"
+        />
+    <ImageView
+        android:layout_marginLeft="50dp"
+        android:id="@+id/hangup"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:textColor="@color/blue"
+        android:text="HangUp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:src="@drawable/ic_call_end_black_24dp"
+        android:background="@drawable/roundcorners2"
+        />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

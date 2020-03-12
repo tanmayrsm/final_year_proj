@@ -11,26 +11,20 @@
     android:id="@+id/mainbaro"
     >
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_person_black_24dp"
-        android:id="@+id/dp_toolbar"
-        android:padding="5dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:id="@+id/text_toolbar"
-        android:text="Samvad"
         style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-        android:gravity="center_vertical"/>
+        android:gravity="center_vertical"
+        android:src="@drawable/logi"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_history_"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="50dp"
         android:padding="5dp"
         android:id="@+id/call_history"
         />

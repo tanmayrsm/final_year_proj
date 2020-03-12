@@ -1,16 +1,19 @@
 package com.example.beproj3;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Emergency extends AppCompatActivity {
-    Button polic ,ambul , fira ,seni;
+    CardView polic ,ambul , fira ,seni;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,17 @@ public class Emergency extends AppCompatActivity {
         ambul = findViewById(R.id.ambu);
         fira = findViewById(R.id.fire);
         seni = findViewById(R.id.sen);
+        back = findViewById(R.id.backo);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Emergency.this,MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
+            }
+        });
 
         polic.setOnClickListener(new View.OnClickListener() {
             @Override

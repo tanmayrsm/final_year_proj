@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="475dp"
+    android:background="#FFFFFF"
+    android:padding="5dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Object name"
+            android:textColor="#000000"
+            android:id="@+id/obj_name"/>
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/uska_img"
+        android:src="@drawable/ic_person_black_24dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/uska_msg"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:id="@+id/ok"
+        android:background="@drawable/button_connect"
+        android:layout_marginTop="28dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/end_call"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:textColor="@color/blue"
+        android:text="HangUp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:src="@drawable/ic_call_end_black_24dp"
+        android:background="@drawable/roundcorners2"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+
+</LinearLayout>

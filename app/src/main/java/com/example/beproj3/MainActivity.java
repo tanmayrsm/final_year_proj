@@ -9,12 +9,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.media.MediaPlayer;
 import android.media.Ringtone;
@@ -47,6 +49,7 @@ import com.example.beproj3.Models.Prevalent;
 import com.example.beproj3.Models.SentModel;
 import com.example.beproj3.Models.User;
 import com.example.beproj3.Models.UserStatus;
+import com.example.beproj3.Models.Value;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -114,17 +117,21 @@ public class MainActivity extends AppCompatActivity implements
 
     LinearLayout my_con ,sento ,recvo ;
 
-
+    Dialog call_him ,receive_him;
 
     Button my_contacts ,my_users , sent_acti ,received_acti, no_of_notts;
 
-    String my_id ,my_name ,uska_id ,uska_name ,usrname_string,he_id ,usrname_string_email;
+    String my_id ,my_name ,uska_ido ,uska_name ,usrname_string,he_id ,usrname_string_email ,uska_img2;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        call_him = new Dialog(this);
+        receive_him = new Dialog(this);
+
 
         nono = findViewById(R.id.no_contacts);
 
@@ -801,6 +808,7 @@ public class MainActivity extends AppCompatActivity implements
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                                 String phone_karne_wale_ka_id = dataSnapshot.getValue().toString();
+                                uska_ido = phone_karne_wale_ka_id;
 
                                 DatabaseReference ref2 = FirebaseDatabase.getInstance().getReference()
                                         .child("Users").child(phone_karne_wale_ka_id).child("name");
@@ -825,13 +833,42 @@ public class MainActivity extends AppCompatActivity implements
                                         player = MediaPlayer.create(MainActivity.this, Settings.System.DEFAULT_RINGTONE_URI);
                                         player.start();
 
-                                        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-                                        alertDialog.setTitle("Incoming");
-                                        alertDialog.setMessage("call mail id : " + nameo);
-                                        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Reject", new DialogInterface.OnClickListener() {
+                                        //dialog open
+                                        TextView uska_naam2 ;
+                                        ImageView uska_img ,end_call ,pick_call;
+                                        Button busy ,later ,i_ll_call_later;
+                                        receive_him.setContentView(R.layout.receive_call);
+
+                                        uska_naam2 = receive_him.findViewById(R.id.obj_name);
+                                        uska_img = receive_him.findViewById(R.id.uska_img);
+                                        end_call = receive_him.findViewById(R.id.hangup);
+                                        pick_call = receive_him.findViewById(R.id.pick);
+
+                                        busy = receive_him.findViewById(R.id.busy);
+                                        later = receive_him.findViewById(R.id.call_me_later);
+                                        i_ll_call_later = receive_him.findViewById(R.id.i_will_call);;
+
+
+                                        uska_naam2.setText(nameo);
+                                        DatabaseReference rty = FirebaseDatabase.getInstance().getReference("Users").child(uska_ido).child("image_url");
+                                        rty.addValueEventListener(new ValueEventListener() {
                                             @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                dialog.dismiss();
+                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                                if(dataSnapshot.exists())
+                                                    uska_img2 = dataSnapshot.getValue().toString();
+                                                    Glide.with(MainActivity.this).load(uska_img2).into(uska_img);
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                            }
+                                        });
+
+                                        end_call.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                receive_him.dismiss();
                                                 try{
                                                     call.hangup();
 
@@ -839,20 +876,101 @@ public class MainActivity extends AppCompatActivity implements
 
                                                 }
                                                 player.stop();
+
+                                                DatabaseReference rto = FirebaseDatabase.getInstance().getReference("short_btns").child(uska_ido).child(firebaseUser.getUid());
+                                                Value v = new Value("Call ended");
+                                                rto.setValue(v);
                                             }
                                         });
-
-                                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Pick", new DialogInterface.OnClickListener() {
+                                        pick_call.setOnClickListener(new View.OnClickListener() {
                                             @Override
-                                            public void onClick(DialogInterface dialog, int which) {
+                                            public void onClick(View view) {
                                                 call = incomingcalll;
                                                 call.answer();
                                                 call.addCallListener(new SinchCallListener());
                                                 player.stop();
+                                                receive_him.dismiss();
                                             }
                                         });
-                                        alertDialog.show();
 
+                                        busy.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                receive_him.dismiss();
+                                                try{
+                                                    call.hangup();
+
+                                                }catch (Exception e){
+
+                                                }
+                                                player.stop();
+                                                DatabaseReference rto = FirebaseDatabase.getInstance().getReference("short_btns").child(uska_ido).child(firebaseUser.getUid());
+                                                Value v = new Value("I'm Busy");
+                                                rto.setValue(v);
+                                            }
+                                        });
+                                        later.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                receive_him.dismiss();
+                                                try{
+                                                    call.hangup();
+
+                                                }catch (Exception e){
+
+                                                }
+                                                player.stop();
+                                                DatabaseReference rto = FirebaseDatabase.getInstance().getReference("short_btns").child(uska_ido).child(firebaseUser.getUid());
+                                                Value v = new Value("Call me Later");
+                                                rto.setValue(v);
+                                            }
+                                        });
+                                        i_ll_call_later.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                receive_him.dismiss();
+                                                try{
+                                                    call.hangup();
+
+                                                }catch (Exception e){
+
+                                                }
+                                                player.stop();
+                                                DatabaseReference rto = FirebaseDatabase.getInstance().getReference("short_btns").child(uska_ido).child(firebaseUser.getUid());
+                                                Value v = new Value("I'll Call later");
+                                                rto.setValue(v);
+                                            }
+                                        });
+
+                                        receive_him.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                                        receive_him.show();
+//                                        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+//                                        alertDialog.setTitle("Incoming");
+//                                        alertDialog.setMessage("call mail id : " + nameo);
+//                                        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Reject", new DialogInterface.OnClickListener() {
+//                                            @Override
+//                                            public void onClick(DialogInterface dialog, int which) {
+//                                                dialog.dismiss();
+//                                                try{
+//                                                    call.hangup();
+//
+//                                                }catch (Exception e){
+//
+//                                                }
+//                                                player.stop();
+//                                            }
+//                                        });
+//
+//                                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Pick", new DialogInterface.OnClickListener() {
+//                                            @Override
+//                                            public void onClick(DialogInterface dialog, int which) {
+//                                                call = incomingcalll;
+//                                                call.answer();
+//                                                call.addCallListener(new SinchCallListener());
+//                                                player.stop();
+//                                            }
+//                                        });
+//                                        alertDialog.show();
                                     }
                                     @Override
                                     public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -997,17 +1115,130 @@ public class MainActivity extends AppCompatActivity implements
 
 
     private void openCallerDialog(final Call call ,final User user ) {
-        AlertDialog alertDialogCall = new AlertDialog.Builder(MainActivity.this).create();
-        alertDialogCall.setTitle("Alert");
-        alertDialogCall.setMessage("Calling to :"  +user.getName());
-        alertDialogCall.setButton(AlertDialog.BUTTON_NEUTRAL, "Hang Up", new DialogInterface.OnClickListener() {
+
+
+
+        //dialog open
+        TextView uska_naam2 ,his_msg;
+        ImageView uska_img ,end_call;
+        Button okay;
+        //Button busy ,later ,i_ll_call_later;
+        call_him.setContentView(R.layout.call_);
+
+        uska_naam2 = call_him.findViewById(R.id.obj_name);
+        his_msg = call_him.findViewById(R.id.uska_msg);
+        okay = call_him.findViewById(R.id.ok);
+
+
+        uska_img = call_him.findViewById(R.id.uska_img);
+        end_call = call_him.findViewById(R.id.end_call);
+
+
+        uska_naam2.setText(user.getName());
+        DatabaseReference rty = FirebaseDatabase.getInstance().getReference("Users").child(user.getUserid()).child("image_url");
+        rty.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-                call.hangup();
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists())
+                    uska_img2 = dataSnapshot.getValue().toString();
+                Glide.with(MainActivity.this).load(uska_img2).into(uska_img);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
-        alertDialogCall.show();
+
+        DatabaseReference rto = FirebaseDatabase.getInstance().getReference("short_btns").child(firebaseUser.getUid()).child(user.getUserid()).child("value");
+        rto.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    his_msg.setText(dataSnapshot.getValue().toString());
+                    okay.setVisibility(View.VISIBLE);
+                    end_call.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+        okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                call_him.dismiss();
+                try{
+                    call.hangup();
+
+                }catch (Exception e){
+
+                    }
+                    //remove call ended frm dB
+                    DatabaseReference refo = FirebaseDatabase.getInstance().getReference("short_btns").child(firebaseUser.getUid()).child(user.getUserid());
+                    refo.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if(dataSnapshot.exists())
+                                dataSnapshot.getRef().removeValue();
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+                DatabaseReference refo2 = FirebaseDatabase.getInstance().getReference("short_btns").child(user.getUserid()).child(firebaseUser.getUid());
+                refo2.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists())
+                            dataSnapshot.getRef().removeValue();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        });
+
+        end_call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                call_him.dismiss();
+                try{
+                    call.hangup();
+
+                }catch (Exception e){
+
+                }
+                }
+        });
+
+        call_him.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        call_him.show();
+
+
+
+//        AlertDialog alertDialogCall = new AlertDialog.Builder(MainActivity.this).create();
+//        alertDialogCall.setTitle("Alert");
+//        alertDialogCall.setMessage("Calling to :"  +user.getName());
+//        alertDialogCall.setButton(AlertDialog.BUTTON_NEUTRAL, "Hang Up", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//                call.hangup();
+//            }
+//        });
+//        alertDialogCall.show();
     }
 
 

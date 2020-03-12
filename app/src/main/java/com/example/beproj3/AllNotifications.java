@@ -214,8 +214,8 @@ public class AllNotifications extends AppCompatActivity {
 
                 if(!dataSnapshot.exists()){
                     //Toast.makeText(AllNotifications.this, "No notts for busy", Toast.LENGTH_SHORT).show();
-                    rsv.setVisibility(View.GONE);
-                    nono.setVisibility(View.VISIBLE);
+                    //rsv.setVisibility(View.GONE);
+                    //nono.setVisibility(View.VISIBLE);
                     return;
                 }
                 // Log.e("all contacts efore","userarraylist:"+userArrayList.toString());
@@ -329,7 +329,20 @@ public class AllNotifications extends AppCompatActivity {
         });
 
 
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(!dataSnapshot.exists()){
+                    rsv.setVisibility(View.GONE);
+                    nono.setVisibility(View.VISIBLE);
+                }
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
     }
 

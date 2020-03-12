@@ -39,7 +39,7 @@
         android:textAlignment="center"
         android:gravity="center_vertical"
         android:text="No Notifications"
-        android:visibility="visible"/>
+        android:visibility="gone"/>
 
 
 
