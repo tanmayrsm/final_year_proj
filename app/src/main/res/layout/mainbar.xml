@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_history_"
         android:layout_marginLeft="50dp"
+        android:visibility="visible"
         android:padding="5dp"
         android:id="@+id/call_history"
         />
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_search_black_24dp"
         android:padding="10dp"
+        android:layout_marginLeft="10dp"
         android:id="@+id/search_btn"
         />
 

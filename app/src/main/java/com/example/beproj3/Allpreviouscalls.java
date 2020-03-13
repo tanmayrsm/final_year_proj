@@ -144,10 +144,8 @@ public class Allpreviouscalls extends AppCompatActivity {
 
                     if(prevcalls.getChats()!= null){
                         prevArrayList.add(prevcalls);
-                        Log.e("Added:",prevcalls.getUid());
+                       // Log.e("Added:",prevcalls.getUid());
                     }
-
-
 
                     AllprevCallsAdapter adapter = new AllprevCallsAdapter(Allpreviouscalls.this ,prevArrayList);
                     recyclerView.setAdapter(adapter);
