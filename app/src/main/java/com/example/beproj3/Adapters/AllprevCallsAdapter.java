@@ -74,7 +74,7 @@ public class AllprevCallsAdapter extends RecyclerView.Adapter<AllprevCallsAdapte
         holder.Duration.setText(prev.getEnd());
 
         //set his name
-        DatabaseReference chaman = FirebaseDatabase.getInstance().getReference("Users").child(prev.getUid()).child("name");
+           DatabaseReference chaman = FirebaseDatabase.getInstance().getReference("Users").child(prev.getUid()).child("name");
         chaman.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

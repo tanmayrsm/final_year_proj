@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-ml-natural-language-translate-model:20.0.7@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0fe1136aa67f15d28f7b15b2e30afc2e/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0fe1136aa67f15d28f7b15b2e30afc2e/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e47f39fa6b84bfbbf353c8d604e5a6a/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e47f39fa6b84bfbbf353c8d604e5a6a/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-ml-natural-language-translate-model/20.0.7/cfc2cb8991fe84189c1e6de4c920465afd21de41/firebase-ml-natural-language-translate-model-20.0.7-javadoc.jar!/" />
