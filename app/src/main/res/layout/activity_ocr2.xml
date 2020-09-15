@@ -6,32 +6,41 @@
     android:padding="10dp"
     tools:context=".OCR2Activity">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reli"
+        android:layout_centerHorizontal="true">
     <Button
         android:id="@+id/bt_gallery"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary2"
         android:text="Gallery"
+        android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
     <Button
         android:id="@+id/bt_camera"
-        android:layout_width="118dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_toRightOf="@id/bt_gallery"
         android:background="@color/colorPrimary"
         android:text="Camera"
+        android:textAllCaps="false"
         android:textColor="@color/common_google_signin_btn_text_dark_default" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="fill_parent"
         android:layout_height="300dp"
-        android:layout_below="@id/bt_gallery"
+        android:layout_below="@id/reli"
         android:layout_marginTop="57dp"
         android:scrollbars="vertical"
-        android:textIsSelectable="true" />
+        android:textIsSelectable="true"
+        android:background="@color/cardview_light_background"/>
 
     <ImageView
         android:id="@+id/image"

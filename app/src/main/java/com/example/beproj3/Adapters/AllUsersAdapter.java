@@ -48,6 +48,8 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.AllUse
 
     DatabaseReference reference3 = FirebaseDatabase.getInstance().getReference().child("Calls");
     DatabaseReference ref_call_user = FirebaseDatabase.getInstance().getReference().child("Calls");
+
+
     public AllUsersAdapter(Activity context ,ArrayList<User> userArrayList){
         this.context = context;
         this.userArrayList = userArrayList;

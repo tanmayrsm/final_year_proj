@@ -3,6 +3,7 @@ package com.example.beproj3;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,6 +45,7 @@ public class Regsiter extends AppCompatActivity {
     String[] fb_vals  = {"en","hi","mr","bn","ta","te"};
     String[] lang = {"English","Hindi","Marathi","Bengali","Tamil","Telugu"};
     String my,fb,lango;
+    ProgressDialog loadingbar;
     int index;
     //    marathi - mr_IN
 //        hindi - hi_IN
@@ -71,20 +73,17 @@ public class Regsiter extends AppCompatActivity {
         reg = findViewById(R.id.register);
 
 
-
-
-//        spinner1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-//            }
-//        });
-
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String text = spinner1.getSelectedItem().toString();
                 index = getIndexOf(lang,text);
+
+                loadingbar = new ProgressDialog(Regsiter.this);
+                loadingbar.setTitle("Making new Profile");
+                loadingbar.setMessage("Please wait...");
+                loadingbar.setCanceledOnTouchOutside(false);
+                loadingbar.show();
 
                 my = my_lango[index];
                 fb = fb_vals[index];
@@ -108,7 +107,7 @@ public class Regsiter extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             FirebaseUser firebaseUser = auth.getCurrentUser();
-                            Toast.makeText(Regsiter.this, "fb_lang:"+fb, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(Regsiter.this, "fb_lang:"+fb, Toast.LENGTH_SHORT).show();
 
                             User user = new User(name_str,email_str,pass_str,firebaseUser.getUid(),my,fb,lango ,"");
                             reference.child(firebaseUser.getUid()).setValue(user)
@@ -116,17 +115,16 @@ public class Regsiter extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
-
-
                                                 getLanguageCode(fb);
-
                                                 Toast.makeText(Regsiter.this, "User successfully added", Toast.LENGTH_SHORT).show();
                                                 Intent i = new Intent(Regsiter.this ,MainActivity.class);
+                                                loadingbar.dismiss();
                                                 startActivity(i);
                                                 finish();
                                             }
                                             else{
                                                 String error = task.getException().getMessage();
+                                                loadingbar.dismiss();
                                                 Toast.makeText(Regsiter.this, "User not registered" + error, Toast.LENGTH_SHORT).show();
                                             }
                                         }
@@ -147,14 +145,14 @@ public class Regsiter extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (!task.isSuccessful()) {
-                                                Toast.makeText(Regsiter.this, "Speech gya nhi dB me", Toast.LENGTH_SHORT).show();
+                                                //Toast.makeText(Regsiter.this, "Speech gya nhi dB me", Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     });
                         }
                         else{
                             String error2 = task.getException().getMessage();
-                            Toast.makeText(Regsiter.this, "something Fishy: "+error2, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Regsiter.this, "Connection error: "+error2, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

@@ -83,6 +83,8 @@ public class EditProfile extends Activity {
 
         auth = FirebaseAuth.getInstance();
         firebaseUser = auth.getCurrentUser();
+
+
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -264,6 +266,7 @@ public class EditProfile extends Activity {
         pd.show();
 
         if(mImageUri != null){
+
             String jam = "";
             if(getFileExtension(mImageUri) == null)
                 jam = "jpg";

@@ -104,6 +104,12 @@ public class Login extends AppCompatActivity {
         String email = edEmail.getText().toString();
         String pass = edPass.getText().toString();
 
+        loadingbar = new ProgressDialog(this);
+        loadingbar.setTitle("Logging In");
+        loadingbar.setMessage("Please wait...");
+        loadingbar.setCanceledOnTouchOutside(false);
+        loadingbar.show();
+
         if(!email.equals("") && !pass.equals("")){
             auth.signInWithEmailAndPassword(email,pass)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -112,13 +118,14 @@ public class Login extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 Paper.book().write(Prevalent.UserEmailKey , email);
                                 Paper.book().write(Prevalent.UserPasswordKey ,pass);
-
                                 Intent intent = new Intent(Login.this ,MainActivity.class);
+                                loadingbar.dismiss();
                                 startActivity(intent);
                             }
                             else{
                                 String error2 = task.getException().getMessage();
-                                Toast.makeText(Login.this, "something Fishy: "+error2, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Wrong credentials: "+error2, Toast.LENGTH_SHORT).show();
+                                loadingbar.dismiss();
                             }
                         }
                     });

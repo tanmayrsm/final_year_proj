@@ -80,6 +80,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -347,23 +348,25 @@ public class chat_history extends AppCompatActivity
             }
         });
 
-        //ch_with = findViewById(R.id.chat_with2);
-        //Toast.makeText(this, "uska naam:"+uskaId, Toast.LENGTH_SHORT).show();
-
         chatsAdapter = new AllChatsAdapter(chat_history.this,chatlist);
         linearLayoutManager = new LinearLayoutManager(this);
         recyclerViewr.setLayoutManager(linearLayoutManager);
         recyclerViewr.setAdapter(chatsAdapter);
-        // recyclerViewr.scrollToPosition(chatlist.size() - 1);
+        chatsAdapter.notifyDataSetChanged();
+        recyclerViewr.setHasFixedSize(true);
+        recyclerViewr.getRecycledViewPool().setMaxRecycledViews(0, 0);
+        recyclerViewr.scrollToPosition(chatlist.size() - 1);
 
 
         ///set native recycler view
         nativeChatsAdapter = new AllNativeChatsAdapter(nativechatlist);
         linearLayoutManager2 = new LinearLayoutManager(this);
         native_recycler.setLayoutManager(linearLayoutManager2);
-        //native_recycler.scrollToPosition(nativechatlist.size() - 1);
-
+        native_recycler.scrollToPosition(nativechatlist.size() - 1);
         native_recycler.setAdapter(nativeChatsAdapter);
+        nativeChatsAdapter.notifyDataSetChanged();
+        native_recycler.setHasFixedSize(true);
+        native_recycler.getRecycledViewPool().setMaxRecycledViews(0, 0);
 
         usre.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -587,11 +590,15 @@ public class chat_history extends AppCompatActivity
                 Chats chat = dataSnapshot.getValue(Chats.class);
                 chatlist.add(chat);
                 chatsAdapter.notifyDataSetChanged();
+                recyclerViewr.setHasFixedSize(true);
                 recyclerViewr.scrollToPosition(chatlist.size() -1);
+                recyclerViewr.getRecycledViewPool().setMaxRecycledViews(0, 0);
+
 
                 //add in native recycler view also
                 nativechatlist.add(chat);
                 nativeChatsAdapter.notifyDataSetChanged();
+                recyclerViewr.setHasFixedSize(true);
                 native_recycler.scrollToPosition(nativechatlist.size() - 1);
             }
 

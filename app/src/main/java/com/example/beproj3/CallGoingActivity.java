@@ -234,8 +234,8 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
                             result2.put("uid",firebaseUser.getUid());
 
                             //Log.e("phonewlring:",phone_karne_wale_ka_id+" -->"+randomString);
-                            hist.child(firebaseUser.getUid()).child(start_time).updateChildren(result);
-                            hist2.child(phone_karne_wale_ka_id).child(start_time).updateChildren(result2);
+                            hist.child(firebaseUser.getUid()).child(start_time.substring(0,start_time.length()-3)).updateChildren(result);
+                            hist2.child(phone_karne_wale_ka_id).child(start_time.substring(0,start_time.length()-3)).updateChildren(result2);
 
 
                             DatabaseReference ref2 = FirebaseDatabase.getInstance().getReference()
@@ -288,8 +288,8 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
                             result2.put("uid",firebaseUser.getUid());
 
                             //Log.e("phonewlring:",phone_karne_wale_ka_id+" -->"+randomString);
-                            hist.child(firebaseUser.getUid()).child(start_time).updateChildren(result);
-                            hist2.child(phone_karne_wale_ka_id).child(start_time).updateChildren(result2);
+                            hist.child(firebaseUser.getUid()).child(start_time.substring(0,start_time.length()-3)).updateChildren(result);
+                            hist2.child(phone_karne_wale_ka_id).child(start_time.substring(0,start_time.length()-3)).updateChildren(result2);
 
 
 
@@ -418,8 +418,8 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
 
 
                 //Log.e("phonewlring:",phone_karne_wale_ka_id+" -->"+randomString);
-                hist.child(firebaseUser.getUid()).child(start_time).updateChildren(result);
-                hist2.child(phone_karne_wale_ka_id).child(start_time).updateChildren(result);
+                hist.child(firebaseUser.getUid()).child(start_time.substring(0,start_time.length()-3)).updateChildren(result);
+                hist2.child(phone_karne_wale_ka_id).child(start_time.substring(0,start_time.length()-3)).updateChildren(result);
 
                 //Toast.makeText(CallGoingActivity.this, "Call ended", Toast.LENGTH_SHORT).show();
                 if (call != null)
@@ -439,9 +439,10 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
 
 
                     //idhar problem aata call end pe
-                        call = sinchClient.getCallClient().callUser(user.getUserid());
-                        call.addCallListener(new CallGoingActivity.SinchCallListener());
-                        call.hangup();
+
+                    call = sinchClient.getCallClient().callUser(user.getUserid());
+                    call.addCallListener(new CallGoingActivity.SinchCallListener());
+                    call.hangup();
 
 
                 }
@@ -791,10 +792,12 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
         //// recycler view
         chatsAdapter = new AllChatsAdapter(CallGoingActivity.this,chatlist);
         linearLayoutManager = new LinearLayoutManager(this);
+
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(chatsAdapter);
-
-
+        chatsAdapter.notifyDataSetChanged();
+        rv.setHasFixedSize(true);
+        rv.getRecycledViewPool().setMaxRecycledViews(0, 0);
     }
 
     private class SinchCallListener implements CallListener {
@@ -1086,6 +1089,8 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
                                             Chats chat = dataSnapshot.getValue(Chats.class);
                                             chatlist.add(chat);
                                             chatsAdapter.notifyDataSetChanged();
+                                            rv.setHasFixedSize(true);
+                                            rv.scrollToPosition(chatlist.size()-1);
                                         }
 
                                         @Override
@@ -1689,8 +1694,8 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
 
                                                 //start putting chats in dB for history
 
-                                                DatabaseReference hist = FirebaseDatabase.getInstance().getReference("prev_Calls").child(firebaseUser.getUid()).child(start_time).child("Chats");
-                                                DatabaseReference hist2 = FirebaseDatabase.getInstance().getReference("prev_Calls").child(phone_karne_wale_ka_id).child(start_time).child("Chats");
+                                                DatabaseReference hist = FirebaseDatabase.getInstance().getReference("prev_Calls").child(firebaseUser.getUid()).child(start_time.substring(0,start_time.length()-3)).child("Chats");
+                                                DatabaseReference hist2 = FirebaseDatabase.getInstance().getReference("prev_Calls").child(phone_karne_wale_ka_id).child(start_time.substring(0,start_time.length()-3)).child("Chats");
 
                                                 HashMap<String, Object> result = new HashMap<>();
 //                                                result.put("start", start_time);
@@ -1762,8 +1767,8 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
                                                 call_hist2.push().setValue(dataSnapshot.getValue());
 
 
-                                                DatabaseReference hist = FirebaseDatabase.getInstance().getReference("prev_Calls").child(firebaseUser.getUid()).child(start_time).child("Chats");
-                                                DatabaseReference hist2 = FirebaseDatabase.getInstance().getReference("prev_Calls").child(phone_karne_wale_ka_id).child(start_time).child("Chats");
+                                                DatabaseReference hist = FirebaseDatabase.getInstance().getReference("prev_Calls").child(firebaseUser.getUid()).child(start_time.substring(0,start_time.length()-3)).child("Chats");
+                                                DatabaseReference hist2 = FirebaseDatabase.getInstance().getReference("prev_Calls").child(phone_karne_wale_ka_id).child(start_time.substring(0,start_time.length()-3)).child("Chats");
 
                                                 HashMap<String, Object> result = new HashMap<>();
 //                                                result.put("start", start_time);
@@ -1879,8 +1884,8 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
                                                 call_hist2.push().setValue(result2);
 
 
-                                                DatabaseReference hist = FirebaseDatabase.getInstance().getReference("prev_Calls").child(firebaseUser.getUid()).child(start_time).child("Chats");
-                                                DatabaseReference hist2 = FirebaseDatabase.getInstance().getReference("prev_Calls").child(phone_karne_wale_ka_id).child(start_time).child("Chats");
+                                                DatabaseReference hist = FirebaseDatabase.getInstance().getReference("prev_Calls").child(firebaseUser.getUid()).child(start_time.substring(0,start_time.length()-3)).child("Chats");
+                                                DatabaseReference hist2 = FirebaseDatabase.getInstance().getReference("prev_Calls").child(phone_karne_wale_ka_id).child(start_time.substring(0,start_time.length()-3)).child("Chats");
 
                                                 HashMap<String, Object> result22 = new HashMap<>();
 //                                                result.put("start", start_time);
@@ -1966,8 +1971,8 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
 
                                                 call_hist2.push().setValue(result2);
 
-                                                DatabaseReference hist = FirebaseDatabase.getInstance().getReference("prev_Calls").child(firebaseUser.getUid()).child(start_time).child("Chats");
-                                                DatabaseReference hist2 = FirebaseDatabase.getInstance().getReference("prev_Calls").child(phone_karne_wale_ka_id).child(start_time).child("Chats");
+                                                DatabaseReference hist = FirebaseDatabase.getInstance().getReference("prev_Calls").child(firebaseUser.getUid()).child(start_time.substring(0,start_time.length()-3)).child("Chats");
+                                                DatabaseReference hist2 = FirebaseDatabase.getInstance().getReference("prev_Calls").child(phone_karne_wale_ka_id).child(start_time.substring(0,start_time.length()-3)).child("Chats");
 
                                                 HashMap<String, Object> result22 = new HashMap<>();
 //                                                result.put("start", start_time);
@@ -2179,10 +2184,10 @@ public class CallGoingActivity extends AppCompatActivity implements RecognitionL
                         langCode2 = 0;
                 }
                 if(langCode == langCode2){
-                    Toast.makeText(CallGoingActivity.this, "Same lang on both sides", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(CallGoingActivity.this, "Same lang on both sides", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Toast.makeText(CallGoingActivity.this, "lc1 and2 : " + langCode + " " +langCode2, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(CallGoingActivity.this, "lc1 and2 : " + langCode + " " +langCode2, Toast.LENGTH_SHORT).show();
 
                 FirebaseTranslatorOptions options = new FirebaseTranslatorOptions.Builder()
                         //from language

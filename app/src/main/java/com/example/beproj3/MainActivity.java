@@ -5,16 +5,21 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.multidex.MultiDexApplication;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
@@ -94,8 +99,8 @@ public class MainActivity extends AppCompatActivity implements
     Call call;
     ArrayList<User> userArrayList;
     DatabaseReference reference;
-    TextView usrname ;
-    ImageView not_bell ,prevCalls ,searc;
+    TextView usrname;
+    ImageView not_bell, prevCalls, searc;
     int no_of_notifications = 0;
     ProgressDialog loadingbar;
     public boolean bullap = false;
@@ -115,13 +120,13 @@ public class MainActivity extends AppCompatActivity implements
     private double currentLatitude;
     private double currentLongitude;
 
-    LinearLayout my_con ,sento ,recvo ;
+    LinearLayout my_con, sento, recvo;
 
-    Dialog call_him ,receive_him;
+    Dialog call_him, receive_him;
 
-    Button my_contacts ,my_users , sent_acti ,received_acti, no_of_notts;
+    Button my_contacts, my_users, sent_acti, received_acti, no_of_notts;
 
-    String my_id ,my_name ,uska_ido ,uska_name ,usrname_string,he_id ,usrname_string_email ,uska_img2;
+    String my_id, my_name, uska_ido, uska_name, usrname_string, he_id, usrname_string_email, uska_img2;
 
 
     @Override
@@ -139,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements
         setSupportActionBar(toola);
         searc = findViewById(R.id.search_btn);
 
-        my_con =  findViewById(R.id.my_users_linear);
+        my_con = findViewById(R.id.my_users_linear);
         sento = findViewById(R.id.my_sent_linear);
         recvo = findViewById(R.id.my_received_linear);
 
@@ -148,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 bullap = true;
-                Intent i = new Intent(MainActivity.this,AllContacts.class);
+                Intent i = new Intent(MainActivity.this, AllContacts.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
                 finish();
@@ -159,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 bullap = true;
-                Intent i = new Intent(MainActivity.this,AllSent.class);
+                Intent i = new Intent(MainActivity.this, AllSent.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
                 finish();
@@ -170,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 bullap = true;
-                Intent i = new Intent(MainActivity.this,AllReceived.class);
+                Intent i = new Intent(MainActivity.this, AllReceived.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
                 finish();
@@ -191,8 +196,9 @@ public class MainActivity extends AppCompatActivity implements
 //            }
 //        });
 
-        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+        recyclerView.getRecycledViewPool().setMaxRecycledViews(0, 0);
 
         reference = FirebaseDatabase.getInstance().getReference().child("Users");
 
@@ -219,7 +225,7 @@ public class MainActivity extends AppCompatActivity implements
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 User user = dataSnapshot.getValue(User.class);
-                if(user.getImage_url() != null)
+                if (user.getImage_url() != null)
                     Glide.with(getApplicationContext()).load(user.getImage_url()).into(tool_dp);
                 else
                     Glide.with(getApplicationContext()).load(R.drawable.ic_face_black_24dp).into(tool_dp);
@@ -235,7 +241,7 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
                 bullap = true;
-                startActivity(new Intent(MainActivity.this ,EditProfile.class));
+                startActivity(new Intent(MainActivity.this, EditProfile.class));
             }
         });
 
@@ -245,7 +251,7 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 bullap = true;
-                startActivity(new Intent(MainActivity.this ,Allpreviouscalls.class));
+                startActivity(new Intent(MainActivity.this, Allpreviouscalls.class));
             }
         });
 
@@ -254,14 +260,14 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 bullap = true;
-                startActivity(new Intent(MainActivity.this ,AllNotifications.class));
+                startActivity(new Intent(MainActivity.this, AllNotifications.class));
             }
         });
         no_of_notts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 bullap = true;
-                startActivity(new Intent(MainActivity.this ,AllNotifications.class));
+                startActivity(new Intent(MainActivity.this, AllNotifications.class));
             }
         });
 
@@ -270,7 +276,7 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 bullap = true;
-                Intent i = new Intent(MainActivity.this,AllContacts.class);
+                Intent i = new Intent(MainActivity.this, AllContacts.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
                 finish();
@@ -281,7 +287,7 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 bullap = true;
-                Intent i = new Intent(MainActivity.this,AllSent.class);
+                Intent i = new Intent(MainActivity.this, AllSent.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
                 finish();
@@ -292,7 +298,7 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 bullap = true;
-                Intent i = new Intent(MainActivity.this,AllReceived.class);
+                Intent i = new Intent(MainActivity.this, AllReceived.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
                 finish();
@@ -303,13 +309,12 @@ public class MainActivity extends AppCompatActivity implements
         searc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    if(searcho.getVisibility() == View.GONE)
-                        searcho.setVisibility(View.VISIBLE);
-                    else if(searcho.getVisibility() == View.VISIBLE)
-                    {
-                        searcho.setVisibility(View.GONE);
-                        fetchAllUsers();
-                    }
+                if (searcho.getVisibility() == View.GONE)
+                    searcho.setVisibility(View.VISIBLE);
+                else if (searcho.getVisibility() == View.VISIBLE) {
+                    searcho.setVisibility(View.GONE);
+                    fetchAllUsers();
+                }
             }
         });
 
@@ -340,7 +345,7 @@ public class MainActivity extends AppCompatActivity implements
 
         sinchClient.setSupportCalling(true);
         sinchClient.startListeningOnActiveConnection();
-        sinchClient.getCallClient().addCallClientListener(new SinchCallClientListener(){
+        sinchClient.getCallClient().addCallClientListener(new SinchCallClientListener() {
 
         });
         sinchClient.start();
@@ -357,9 +362,9 @@ public class MainActivity extends AppCompatActivity implements
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(searcho.getText().toString().length() > 0)
+                if (searcho.getText().toString().length() > 0)
                     fetchSearchedUsers(searcho.getText().toString());
-                else if(searcho.getText().toString().length() == 0)
+                else if (searcho.getText().toString().length() == 0)
                     fetchAllUsers();
             }
 
@@ -396,11 +401,10 @@ public class MainActivity extends AppCompatActivity implements
         refp.child("calling_nott").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(!dataSnapshot.exists()){
+                if (!dataSnapshot.exists()) {
                     //Toast.makeText(MainActivity.this, "No notts for call", Toast.LENGTH_SHORT).show();
                     return;
-                }
-                else {
+                } else {
                     for (DataSnapshot dss : dataSnapshot.getChildren()) {
                         Notts notts = dss.getValue(Notts.class);
 
@@ -408,7 +412,7 @@ public class MainActivity extends AppCompatActivity implements
                         Log.e("Notts:", dss.getValue().toString() + " --");
 
                         if (!notts.getUid().equals(firebaseUser.getUid())) {
-                            if(!notts.isSeen()){
+                            if (!notts.isSeen()) {
                                 no_of_notifications++;
                                 no_of_notts.setText(String.valueOf(no_of_notifications));
                                 //no_of_notts.setBackgroundColor(Color.RED);
@@ -429,11 +433,10 @@ public class MainActivity extends AppCompatActivity implements
         refp.child("received_req").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(!dataSnapshot.exists()){
+                if (!dataSnapshot.exists()) {
                     //Toast.makeText(MainActivity.this, "No notts for call", Toast.LENGTH_SHORT).show();
                     return;
-                }
-                else {
+                } else {
                     for (DataSnapshot dss : dataSnapshot.getChildren()) {
                         Notts notts = dss.getValue(Notts.class);
 
@@ -441,7 +444,7 @@ public class MainActivity extends AppCompatActivity implements
                         Log.e("Notts:", dss.getValue().toString() + " --");
 
                         if (!notts.getUid().equals(firebaseUser.getUid())) {
-                            if(!notts.isSeen()){
+                            if (!notts.isSeen()) {
                                 no_of_notifications++;
                                 no_of_notts.setText(String.valueOf(no_of_notifications));
                                 //no_of_notts.setBackgroundColor(Color.RED);
@@ -462,11 +465,10 @@ public class MainActivity extends AppCompatActivity implements
         refp.child("accepted_req").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(!dataSnapshot.exists()){
+                if (!dataSnapshot.exists()) {
                     //Toast.makeText(MainActivity.this, "No notts for call", Toast.LENGTH_SHORT).show();
                     return;
-                }
-                else {
+                } else {
                     for (DataSnapshot dss : dataSnapshot.getChildren()) {
                         Notts notts = dss.getValue(Notts.class);
 
@@ -474,7 +476,7 @@ public class MainActivity extends AppCompatActivity implements
                         Log.e("Notts:", dss.getValue().toString() + " --");
 
                         if (!notts.getUid().equals(firebaseUser.getUid())) {
-                            if(!notts.isSeen()){
+                            if (!notts.isSeen()) {
                                 no_of_notifications++;
                                 no_of_notts.setText(String.valueOf(no_of_notifications));
                                 //no_of_notts.setBackgroundColor(Color.RED);
@@ -495,11 +497,10 @@ public class MainActivity extends AppCompatActivity implements
         refp.child("busy").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(!dataSnapshot.exists()){
+                if (!dataSnapshot.exists()) {
                     //Toast.makeText(MainActivity.this, "No notts for call", Toast.LENGTH_SHORT).show();
                     return;
-                }
-                else {
+                } else {
                     for (DataSnapshot dss : dataSnapshot.getChildren()) {
                         Notts notts = dss.getValue(Notts.class);
 
@@ -507,7 +508,7 @@ public class MainActivity extends AppCompatActivity implements
                         Log.e("Notts:", dss.getValue().toString() + " --");
 
                         if (!notts.getUid().equals(firebaseUser.getUid())) {
-                            if(!notts.isSeen()){
+                            if (!notts.isSeen()) {
                                 no_of_notifications++;
                                 no_of_notts.setText(String.valueOf(no_of_notifications));
                                 //no_of_notts.setBackgroundColor(Color.RED);
@@ -538,37 +539,39 @@ public class MainActivity extends AppCompatActivity implements
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     SentModel sento = snapshot.getValue(SentModel.class);
-                    Log.e("My contacts",sento.toString());
-                    Log.e("sento uid:",sento.uid);
+                    Log.e("My contacts", sento.toString());
+                    Log.e("sento uid:", sento.uid);
                     DatabaseReference refi = FirebaseDatabase.getInstance().getReference("Users").child(sento.uid);
                     refi.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             User user = dataSnapshot.getValue(User.class);
-                            Log.e("User:",user.toString());
-                            Log.e("user array list before",userArrayList.toString());
+                            Log.e("User:", user.toString());
+                            Log.e("user array list before", userArrayList.toString());
 
                             userArrayList.add(user);
 
 
-                            Log.e("MyCOntact1:",userArrayList.toString());
-                            AllUsersAdapter adapter = new AllUsersAdapter(MainActivity.this ,userArrayList);
+                            Log.e("MyCOntact1:", userArrayList.toString());
+                            AllUsersAdapter adapter = new AllUsersAdapter(MainActivity.this, userArrayList);
                             recyclerView.setAdapter(adapter);
                             adapter.notifyDataSetChanged();
+                            recyclerView.setHasFixedSize(true);
 
-                            if(userArrayList.size() == 0){
+                            if (userArrayList.size() == 0) {
                                 recyclerView.setVisibility(View.GONE);
                                 nono.setVisibility(View.VISIBLE);
-                            }else{
+                            } else {
                                 nono.setVisibility(View.GONE);
                             }
                         }
+
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
 
                         }
                     });
-                    Log.e("Main all contacts:",userArrayList.toString());
+                    Log.e("Main all contacts:", userArrayList.toString());
                 }
 
             }
@@ -621,24 +624,26 @@ public class MainActivity extends AppCompatActivity implements
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             User user = dataSnapshot.getValue(User.class);
-                            Log.e("User:",user.toString());
-                            Log.e("user array list before",userArrayList.toString());
+                            Log.e("User:", user.toString());
+                            Log.e("user array list before", userArrayList.toString());
 
-                            if(user.getName().toLowerCase().contains(s.toLowerCase()))
+                            if (user.getName().toLowerCase().contains(s.toLowerCase()))
                                 userArrayList.add(user);
 
-                            Log.e("MyCOntact1 in search:",userArrayList.toString());
-                            AllUsersAdapter adapter = new AllUsersAdapter(MainActivity.this ,userArrayList);
+                            Log.e("MyCOntact1 in search:", userArrayList.toString());
+                            AllUsersAdapter adapter = new AllUsersAdapter(MainActivity.this, userArrayList);
                             recyclerView.setAdapter(adapter);
                             adapter.notifyDataSetChanged();
+                            recyclerView.setHasFixedSize(true);
 
                         }
+
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
 
                         }
                     });
-                    Log.e("Main all contacts:",userArrayList.toString());
+                    Log.e("Main all contacts:", userArrayList.toString());
                 }
 
             }
@@ -692,7 +697,7 @@ public class MainActivity extends AppCompatActivity implements
                     String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
                     String res = currentDate + " " + currentTime;
 
-                    Notts n = new Notts(auth.getUid(),false,res,"calling_nott");
+                    Notts n = new Notts(auth.getUid(), false, res, "calling_nott");
 
                     julia.setValue(n)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -705,6 +710,7 @@ public class MainActivity extends AppCompatActivity implements
                             });
 
                 }
+
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -726,6 +732,7 @@ public class MainActivity extends AppCompatActivity implements
                             .child(dataSnapshot.getValue().toString()).child("calling_nott").child(auth.getUid());
                     julia.removeValue();
                 }
+
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -733,7 +740,7 @@ public class MainActivity extends AppCompatActivity implements
             });
 
             // Toast.makeText(MainActivity.this, "Call established and I am : " + auth.getCurrentUser(), Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(MainActivity.this,CallGoingActivity.class);
+            Intent intent = new Intent(MainActivity.this, CallGoingActivity.class);
             startActivity(intent);
         }
 
@@ -753,37 +760,33 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.menu_logout){
-            if(firebaseUser != null){
+        if (item.getItemId() == R.id.menu_logout) {
+            if (firebaseUser != null) {
                 auth.signOut();
                 Paper.book().destroy();
 
                 finish();
                 bullap = false;
-                startActivity(new Intent(MainActivity.this ,Login.class));
+                startActivity(new Intent(MainActivity.this, Login.class));
             }
-        }
-        else if(item.getItemId() == R.id.eng_ocr){
+        } else if (item.getItemId() == R.id.eng_ocr) {
             bullap = true;
-            startActivity(new Intent(MainActivity.this,capture_open_image.class));
-        }
-        else if(item.getItemId() == R.id.action_settings){
+            startActivity(new Intent(MainActivity.this, capture_open_image.class));
+        } else if (item.getItemId() == R.id.action_settings) {
             bullap = true;
-            startActivity(new Intent(MainActivity.this ,EditProfile.class));
-        }
-        else if(item.getItemId() == R.id.emergency){
+            startActivity(new Intent(MainActivity.this, EditProfile.class));
+        } else if (item.getItemId() == R.id.emergency) {
             bullap = true;
-            startActivity(new Intent(MainActivity.this ,Emergency.class));
-        }
-        else if(item.getItemId() == R.id.prod_search){
+            startActivity(new Intent(MainActivity.this, Emergency.class));
+        } else if (item.getItemId() == R.id.prod_search) {
             bullap = true;
-            startActivity(new Intent(MainActivity.this ,objo_brief_desc.class
+            startActivity(new Intent(MainActivity.this, objo_brief_desc.class
             ));
         }
         return super.onOptionsItemSelected(item);
@@ -791,7 +794,7 @@ public class MainActivity extends AppCompatActivity implements
 
     private class SinchCallClientListener implements CallClientListener {
         @Override
-        public void onIncomingCall(CallClient callClient, final Call incomingcalll ) {
+        public void onIncomingCall(CallClient callClient, final Call incomingcalll) {
 
 
             final DatabaseReference ref = FirebaseDatabase.getInstance().getReference()
@@ -800,7 +803,7 @@ public class MainActivity extends AppCompatActivity implements
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                    if(dataSnapshot.hasChild("from")){
+                    if (dataSnapshot.hasChild("from")) {
 
                         DatabaseReference ref2 = ref.child("from").child("uid");
                         ref2.addValueEventListener(new ValueEventListener() {
@@ -834,9 +837,9 @@ public class MainActivity extends AppCompatActivity implements
                                         player.start();
 
                                         //dialog open
-                                        TextView uska_naam2 ;
-                                        ImageView uska_img ,end_call ,pick_call;
-                                        Button busy ,later ,i_ll_call_later;
+                                        TextView uska_naam2;
+                                        ImageView uska_img, end_call, pick_call;
+                                        Button busy, later, i_ll_call_later;
                                         receive_him.setContentView(R.layout.receive_call);
 
                                         uska_naam2 = receive_him.findViewById(R.id.obj_name);
@@ -846,7 +849,8 @@ public class MainActivity extends AppCompatActivity implements
 
                                         busy = receive_him.findViewById(R.id.busy);
                                         later = receive_him.findViewById(R.id.call_me_later);
-                                        i_ll_call_later = receive_him.findViewById(R.id.i_will_call);;
+                                        i_ll_call_later = receive_him.findViewById(R.id.i_will_call);
+                                        ;
 
 
                                         uska_naam2.setText(nameo);
@@ -854,9 +858,13 @@ public class MainActivity extends AppCompatActivity implements
                                         rty.addValueEventListener(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                                if(dataSnapshot.exists())
+                                                if (dataSnapshot.exists())
                                                     uska_img2 = dataSnapshot.getValue().toString();
+                                                try {
                                                     Glide.with(MainActivity.this).load(uska_img2).into(uska_img);
+                                                } catch (Exception e) {
+
+                                                }
                                             }
 
                                             @Override
@@ -869,10 +877,10 @@ public class MainActivity extends AppCompatActivity implements
                                             @Override
                                             public void onClick(View view) {
                                                 receive_him.dismiss();
-                                                try{
+                                                try {
                                                     call.hangup();
 
-                                                }catch (Exception e){
+                                                } catch (Exception e) {
 
                                                 }
                                                 player.stop();
@@ -897,10 +905,10 @@ public class MainActivity extends AppCompatActivity implements
                                             @Override
                                             public void onClick(View view) {
                                                 receive_him.dismiss();
-                                                try{
+                                                try {
                                                     call.hangup();
 
-                                                }catch (Exception e){
+                                                } catch (Exception e) {
 
                                                 }
                                                 player.stop();
@@ -913,10 +921,10 @@ public class MainActivity extends AppCompatActivity implements
                                             @Override
                                             public void onClick(View view) {
                                                 receive_him.dismiss();
-                                                try{
+                                                try {
                                                     call.hangup();
 
-                                                }catch (Exception e){
+                                                } catch (Exception e) {
 
                                                 }
                                                 player.stop();
@@ -929,10 +937,10 @@ public class MainActivity extends AppCompatActivity implements
                                             @Override
                                             public void onClick(View view) {
                                                 receive_him.dismiss();
-                                                try{
+                                                try {
                                                     call.hangup();
 
-                                                }catch (Exception e){
+                                                } catch (Exception e) {
 
                                                 }
                                                 player.stop();
@@ -943,7 +951,21 @@ public class MainActivity extends AppCompatActivity implements
                                         });
 
                                         receive_him.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                                        receive_him.show();
+
+                                        try {
+                                            //show dialog
+                                            receive_him.show();
+                                        } catch (Exception e) {
+
+                                        }
+//                                        if(!receive_him.isShowing())
+//                                        {
+//
+//                                        }else if(receive_him.isShowing()){
+//                                            receive_him.dismiss();
+//                                            receive_him.show();
+//                                        }
+
 //                                        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
 //                                        alertDialog.setTitle("Incoming");
 //                                        alertDialog.setMessage("call mail id : " + nameo);
@@ -972,17 +994,19 @@ public class MainActivity extends AppCompatActivity implements
 //                                        });
 //                                        alertDialog.show();
                                     }
+
                                     @Override
                                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
                                     }
                                 });
                             }
+
                             @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) { }
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                            }
                         });
-                    }
-                    else{
+                    } else {
                         Toast.makeText(MainActivity.this, "busy hai", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -1000,17 +1024,17 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     protected void onStop() {
         super.onStop();
-        if(!bullap)
-        setStatus("offline");
+        if (!bullap)
+            setStatus("offline");
         Log.e("stop called", "stopp");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(!bullap)
-        setStatus("offline");
-        Log.e("destroy called","destroy");
+        if (!bullap)
+            setStatus("offline");
+        Log.e("destroy called", "destroy");
     }
 
     @Override
@@ -1026,25 +1050,26 @@ public class MainActivity extends AppCompatActivity implements
         no_of_notts.setVisibility(View.GONE);
     }
 
-    public void setStatus(String status){
+    public void setStatus(String status) {
         DatabaseReference df = FirebaseDatabase.getInstance().getReference("User_status").child(firebaseUser.getUid());
         String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
         String res = currentDate + " " + currentTime;
 
-        UserStatus ui = new UserStatus(res ,status ,firebaseUser.getUid());
+        UserStatus ui = new UserStatus(res, status, firebaseUser.getUid());
 
         df.setValue(ui);
     }
-    public void callUser(User user , boolean busy ,boolean blocked){
-        if(call == null){
+
+    public void callUser(User user, boolean busy, boolean blocked) {
+        if (call == null) {
             // boolean busy2 ;
             call = sinchClient.getCallClient().callUser(user.getUserid());
 
             call.addCallListener(new SinchCallListener());
 
 
-            if(busy == true){
+            if (busy == true) {
                 //Toast.makeText(this, "busy h : " + user.getName(), Toast.LENGTH_SHORT).show();
                 //call.hangup();
                 AlertDialog alertDialogCall = new AlertDialog.Builder(MainActivity.this).create();
@@ -1069,7 +1094,7 @@ public class MainActivity extends AppCompatActivity implements
                 String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
                 String res = currentDate + " " + currentTime;
 
-                Notts n = new Notts(firebaseUser.getUid(),false,res,"Busy user");
+                Notts n = new Notts(firebaseUser.getUid(), false, res, "Busy user");
 
                 julia2.setValue(n)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -1080,9 +1105,8 @@ public class MainActivity extends AppCompatActivity implements
                                 }
                             }
                         });
-            }
-            else{
-                openCallerDialog(call ,user);
+            } else {
+                openCallerDialog(call, user);
             }
         }
     }
@@ -1091,10 +1115,10 @@ public class MainActivity extends AppCompatActivity implements
         String my_id = firebaseUser.getUid();
         String uska_id = user.getUserid();
 
-        Intent i = new Intent(MainActivity.this ,chat_history.class);
-        i.putExtra("My",my_id);
-        i.putExtra("UskaId",uska_id);
-        i.putExtra("UskaNaam",user.getName());
+        Intent i = new Intent(MainActivity.this, chat_history.class);
+        i.putExtra("My", my_id);
+        i.putExtra("UskaId", uska_id);
+        i.putExtra("UskaNaam", user.getName());
         bullap = true;
 
         startActivity(i);
@@ -1105,22 +1129,21 @@ public class MainActivity extends AppCompatActivity implements
         String my_id = firebaseUser.getUid();
         String uska_id = user.getUserid();
 
-        Intent i = new Intent(MainActivity.this ,ViewProfile.class);
-        i.putExtra("UskaId",uska_id);
-        i.putExtra("Activity","Main");
+        Intent i = new Intent(MainActivity.this, ViewProfile.class);
+        i.putExtra("UskaId", uska_id);
+        i.putExtra("Activity", "Main");
         bullap = true;
 
         startActivity(i);
     }
 
 
-    private void openCallerDialog(final Call call ,final User user ) {
-
+    private void openCallerDialog(final Call call, final User user) {
 
 
         //dialog open
-        TextView uska_naam2 ,his_msg;
-        ImageView uska_img ,end_call;
+        TextView uska_naam2, his_msg;
+        ImageView uska_img, end_call;
         Button okay;
         //Button busy ,later ,i_ll_call_later;
         call_him.setContentView(R.layout.call_);
@@ -1139,7 +1162,7 @@ public class MainActivity extends AppCompatActivity implements
         rty.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists())
+                if (dataSnapshot.exists())
                     uska_img2 = dataSnapshot.getValue().toString();
                 Glide.with(MainActivity.this).load(uska_img2).into(uska_img);
             }
@@ -1154,7 +1177,7 @@ public class MainActivity extends AppCompatActivity implements
         rto.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
+                if (dataSnapshot.exists()) {
                     his_msg.setText(dataSnapshot.getValue().toString());
                     okay.setVisibility(View.VISIBLE);
                     end_call.setVisibility(View.GONE);
@@ -1172,32 +1195,32 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
                 call_him.dismiss();
-                try{
+                try {
                     call.hangup();
 
-                }catch (Exception e){
+                } catch (Exception e) {
+
+                }
+                //remove call ended frm dB
+                DatabaseReference refo = FirebaseDatabase.getInstance().getReference("short_btns").child(firebaseUser.getUid()).child(user.getUserid());
+                refo.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists())
+                            dataSnapshot.getRef().removeValue();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
-                    //remove call ended frm dB
-                    DatabaseReference refo = FirebaseDatabase.getInstance().getReference("short_btns").child(firebaseUser.getUid()).child(user.getUserid());
-                    refo.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if(dataSnapshot.exists())
-                                dataSnapshot.getRef().removeValue();
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
+                });
 
                 DatabaseReference refo2 = FirebaseDatabase.getInstance().getReference("short_btns").child(user.getUserid()).child(firebaseUser.getUid());
                 refo2.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists())
+                        if (dataSnapshot.exists())
                             dataSnapshot.getRef().removeValue();
                     }
 
@@ -1214,18 +1237,17 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View view) {
                 call_him.dismiss();
-                try{
+                try {
                     call.hangup();
 
-                }catch (Exception e){
+                } catch (Exception e) {
 
                 }
-                }
+            }
         });
 
         call_him.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         call_him.show();
-
 
 
 //        AlertDialog alertDialogCall = new AlertDialog.Builder(MainActivity.this).create();
@@ -1271,9 +1293,29 @@ public class MainActivity extends AppCompatActivity implements
      */
     @Override
     public void onConnected(Bundle bundle) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         Location location = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
         if (location == null) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                return;
+            }
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
 
         } else {

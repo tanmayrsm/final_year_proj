@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-ml-vision-object-detection-model:19.0.5@aar">
     <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ccca10b7414119d8784e445e0ea7c22d/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ccca10b7414119d8784e445e0ea7c22d/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ccca10b7414119d8784e445e0ea7c22d/res" />
     </CLASSES>

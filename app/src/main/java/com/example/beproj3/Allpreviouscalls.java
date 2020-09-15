@@ -146,11 +146,11 @@ public class Allpreviouscalls extends AppCompatActivity {
                         prevArrayList.add(prevcalls);
                        // Log.e("Added:",prevcalls.getUid());
                     }
-
-                    AllprevCallsAdapter adapter = new AllprevCallsAdapter(Allpreviouscalls.this ,prevArrayList);
-                    recyclerView.setAdapter(adapter);
-                    adapter.notifyDataSetChanged();
                 }
+                AllprevCallsAdapter adapter = new AllprevCallsAdapter(Allpreviouscalls.this ,prevArrayList);
+                recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
+                recyclerView.setHasFixedSize(true);
             }
 
             @Override

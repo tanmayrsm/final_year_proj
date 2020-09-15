@@ -11,20 +11,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4b7d117-37f8-4276-80e4-10777a8ddd05" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____app_libs_sinch_android_rtc_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_2_0_alpha01_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_5_0_alpha02_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_ktx_1_5_0_alpha02_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_Ninad_Desktop_b_e_be_proj1_beproj_feb_rev_master2_app_libs_sinch_android_rtc_aar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__Tan_be_pro_04_05_flee_man_march_app_libs_sinch_android_rtc_aar_unspecified_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" afterDir="false" />
@@ -32,8 +37,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_2_0_0_beta4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_2_0_0_beta4_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_3_0_alpha02_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_ktx_1_3_0_alpha02_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_3_0_rc01_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_ktx_1_3_0_rc01_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
@@ -86,33 +91,37 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_places_placereport_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_places_placereport_17_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_17_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_17_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_19_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_common_19_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_image_label_18_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_20_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_20_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_common_19_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_common_19_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_image_label_18_0_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_image_label_18_0_3_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_abt_19_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_abt_19_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_17_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_17_2_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_17_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_17_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_19_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_19_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_19_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_components_16_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_components_16_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_config_19_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_config_19_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_17_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_16_0_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_19_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_20_1_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_20_1_5_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_17_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_16_2_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_16_2_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_16_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_16_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_18_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_18_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_common_22_0_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_model_interpreter_22_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_common_22_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_common_22_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_model_interpreter_22_0_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_model_interpreter_22_0_3_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_22_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_22_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_language_id_model_20_0_7_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_language_id_model_20_0_7_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_smart_reply_18_0_7_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_smart_reply_18_0_7_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_smart_reply_model_20_0_7_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_smart_reply_model_20_0_7_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_translate_22_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_translate_22_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_translate_model_20_0_7_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_natural_language_translate_model_20_0_7_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_24_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_24_0_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_24_0_3_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_image_label_model_19_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_image_label_model_19_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_internal_vkp_16_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_object_detection_model_19_0_3_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_internal_vkp_17_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_internal_vkp_17_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_object_detection_model_19_0_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_ml_vision_object_detection_model_19_0_5_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_17_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_timber_timber_4_4_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_timber_timber_4_4_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_otaliastudios_cameraview_2_0_0_beta04_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_otaliastudios_cameraview_2_0_0_beta04_aar.xml" afterDir="false" />
@@ -122,28 +131,32 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_wonderkiln_camerakit_0_13_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_wonderkiln_camerakit_0_13_1_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_3_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__de_hdodenhof_circleimageview_3_0_1_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_paperdb_paperdb_2_6_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_paperdb_paperdb_2_6_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_70_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_70_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_tensorflow_tensorflow_lite_1_13_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_tensorflow_tensorflow_lite_1_13_1_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNativeChatsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNativeChatsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllprevCallsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllprevCallsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beproj_feb_rev-master2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/EditProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/EditProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Regsiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Regsiter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_allpreviouscalls.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_allpreviouscalls.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ocr2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ocr2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flee_man_march.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flee_man_march.iml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/build/classes/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="1078509b" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -156,106 +169,6 @@
       </state>
     </system>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="99" selection-start-line="99" selection-end-line="99" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllprevCallsAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1972">
-              <caret line="147" column="21" selection-start-line="147" selection-start-column="21" selection-end-line="147" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_notifications.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4454">
-              <caret line="330" selection-start-line="330" selection-end-line="330" />
-              <folding>
-                <element signature="class#6911:8394" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24242">
-              <caret line="1502" column="57" selection-start-line="1502" selection-start-column="52" selection-end-line="1502" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -266,99 +179,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>pop</find>
-      <find>fetc</find>
-      <find>fetch</find>
-      <find>fetchAllUsers</find>
-      <find>fetchalluser</find>
-      <find>no</find>
-      <find>fet</find>
-      <find>no user</find>
-      <find>no no</find>
-      <find>chatlist</find>
-      <find>menu</find>
-      <find>nono</find>
-      <find>native_recycler</find>
-      <find>.se</find>
-      <find>flags</find>
-      <find>alertdia</find>
-      <find>uska_img2</find>
-      <find>myDialog</find>
-      <find>uska_id</find>
-      <find>Va</find>
-      <find>pick</find>
-      <find>Value</find>
-      <find>rty</find>
-      <find>glide</find>
-      <find>icon</find>
-      <find>.child(&quot;va</find>
-      <find>gone</find>
-      <find>Toast</find>
-      <find>com.googl</find>
-      <find>play-</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/TextGraphic.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/wordsModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllButtonsAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/pop_up1.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_obj_descrition.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AlButtons2Adapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllButtons2Adapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/roundcorners3.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_button.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/objo_brief_desc.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_objo_brief_desc.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/capture_open_image.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllContacts.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_sent.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllSent.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_received.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_contacts.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_allpreviouscalls.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/barprofile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_capture_open_image.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ocr.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/ocr.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNativeChatsAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_black_24dp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_view_profile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllReceivedAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_received.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/all_sent.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Emergency.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_emergency.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/roundcorners4.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/Value.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/call_.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/receive_call.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_all_notifications.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllprevCallsAdapter.java" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="85" />
@@ -366,27 +188,12 @@
     <option name="width" value="1750" />
     <option name="height" value="980" />
   </component>
+  <component name="ProjectId" id="1hW7Cj2apBhueD1Pxn2Cp6bnZ6k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="flee_man_march" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="e07df042" />
@@ -398,25 +205,13 @@
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
       <recent name="com.example.beproj3" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -441,8 +236,6 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Auto" />
@@ -493,64 +286,31 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <layout>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1505295" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Designer" order="6" />
-      <window_info id="Resources Explorer" order="7" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32850242" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.6062323" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="1" visible="true" weight="0.5169082" />
-      <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.6167472" />
-      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.29307568" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
-      <window_info anchor="right" id="Flutter Inspector" />
-      <window_info anchor="right" id="Flutter Outline" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.25637585" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15100671" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Designer" order="6" />
-      <window_info id="Resources Explorer" order="7" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.20679887" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.43767706" />
-      <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.29461756" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.25637585" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-    </layout-to-restore>
+  <component name="WindowStateProjectService">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1600142380181">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1600142380181" />
+    <state width="1306" height="250" key="GridCell.Tab.0.bottom" timestamp="1600167526725">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1306" height="250" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1600167526725" />
+    <state width="1306" height="250" key="GridCell.Tab.0.center" timestamp="1600167526725">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1306" height="250" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1600167526725" />
+    <state width="1306" height="250" key="GridCell.Tab.0.left" timestamp="1600167526725">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1306" height="250" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1600167526725" />
+    <state width="1306" height="250" key="GridCell.Tab.0.right" timestamp="1600167526725">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1306" height="250" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1600167526725" />
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1600142019574">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1600142019574" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -558,395 +318,9 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllButtonsAdapter.java</url>
           <line>70</line>
-          <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ocr.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/ocr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllChatsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="172" selection-start-line="166" selection-start-column="12" selection-end-line="172" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_black_24dp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllReceived.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="293" column="43" selection-start-line="293" selection-start-column="43" selection-end-line="293" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_contacts.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_notts.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllReceivedAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3234">
-          <caret line="195" column="52" selection-start-line="195" selection-start-column="52" selection-end-line="195" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_emergency.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="146" column="9" selection-start-line="146" selection-start-column="9" selection-end-line="146" selection-end-column="9" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Emergency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_sent.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_received.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_profile.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllNativeChatsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="278" column="16" selection-start-line="278" selection-start-column="16" selection-end-line="278" selection-end-column="16" />
-          <folding>
-            <element signature="e#19819#19820#0" expanded="true" />
-            <element signature="e#19865#19866#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pop_up1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="36" lean-forward="true" selection-end-line="119" selection-end-column="15" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/roundcorners2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/roundcorners4.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/roundcorners3.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllUsersAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/Locatioi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/Notts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/PDF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/Prevalent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/prevCalls.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/sent_req_model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/SentModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/SmartSuggestionList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/UserStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/wordsModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Models/Value.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="e#129#130#0" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/capture_open_image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="658" selection-start-line="658" selection-end-line="658" />
-          <folding>
-            <element signature="method#displayTextFromImage#0;class#capture_open_image#0" />
-            <element signature="method#detectText#0;class#capture_open_image#0" />
-            <element signature="method#recognizeTextCloud#0;class#capture_open_image#0" />
-            <element signature="method#identifyLanguage#0;class#capture_open_image#0" />
-            <element signature="method#getLanguageCode#0;class#capture_open_image#0" />
-            <element signature="method#translateText#0;class#capture_open_image#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_toolbar.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/call_.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/receive_call.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="215" selection-start-line="215" selection-end-line="215" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/chat_history.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
-          <folding>
-            <element signature="e#21620#21689#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chat_history.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_bar2.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mainbar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Allpreviouscalls.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="147" column="21" selection-start-line="147" selection-start-column="21" selection-end-line="147" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_notifications.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/AllNotifications.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4454">
-          <caret line="330" selection-start-line="330" selection-end-line="330" />
-          <folding>
-            <element signature="class#6911:8394" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/CallGoingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24242">
-          <caret line="1502" column="57" selection-start-line="1502" selection-start-column="52" selection-end-line="1502" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/beproj3/Adapters/AllprevCallsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

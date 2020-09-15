@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.jorgecastilloprz:fabprogresscircle:1.01@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51d534d71b1039f85d122fd87c72ee9b/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51d534d71b1039f85d122fd87c72ee9b/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/899dd8abab12376ea8ef4efc94693879/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/899dd8abab12376ea8ef4efc94693879/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/899dd8abab12376ea8ef4efc94693879/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

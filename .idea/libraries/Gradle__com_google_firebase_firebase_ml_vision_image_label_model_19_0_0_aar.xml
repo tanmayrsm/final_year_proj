@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-ml-vision-image-label-model:19.0.0@aar">
     <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f90101fce870d4861a86fb1b339e718c/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f90101fce870d4861a86fb1b339e718c/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f90101fce870d4861a86fb1b339e718c/res" />
     </CLASSES>

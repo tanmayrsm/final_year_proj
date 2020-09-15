@@ -127,7 +127,7 @@ public class AllNativeChatsAdapter extends RecyclerView.Adapter<AllNativeChatsAd
                     @Override
                     public void onSuccess(String s) {
                         if (s.equals("und")){
-                            Toast.makeText(getApplicationContext(),"Language Not Identified", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(),"Language Not Identified", Toast.LENGTH_SHORT).show();
                             holder.mera_msg.setText(message);
                         }
                         else {

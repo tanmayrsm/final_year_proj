@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-ml-natural-language:22.0.0@aar">
     <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ed5a85328e0a9fbdfa1b18b50725a73a/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ed5a85328e0a9fbdfa1b18b50725a73a/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ed5a85328e0a9fbdfa1b18b50725a73a/res" />
     </CLASSES>

@@ -73,34 +73,38 @@ public class AllprevCallsAdapter extends RecyclerView.Adapter<AllprevCallsAdapte
         // add exact duration
         holder.Duration.setText(prev.getEnd());
 
-        //set his name
-           DatabaseReference chaman = FirebaseDatabase.getInstance().getReference("Users").child(prev.getUid()).child("name");
-        chaman.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                holder.user_ka_naam.setText(dataSnapshot.getValue().toString());
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        //set his image
-        DatabaseReference chaman2 = FirebaseDatabase.getInstance().getReference("Users").child(prev.getUid()).child("image_url");
-        chaman2.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    Glide.with(context).load(dataSnapshot.getValue().toString()).into(holder.prof_image);
+        try{
+            //set his name
+            DatabaseReference chaman = FirebaseDatabase.getInstance().getReference("Users").child(prev.getUid()).child("name");
+            chaman.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    holder.user_ka_naam.setText(dataSnapshot.getValue().toString());
                 }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
+                }
+            });
+            //set his image
+            DatabaseReference chaman2 = FirebaseDatabase.getInstance().getReference("Users").child(prev.getUid()).child("image_url");
+            chaman2.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        Glide.with(context).load(dataSnapshot.getValue().toString()).into(holder.prof_image);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }catch(Exception e){
+
+        }
 
         auth = FirebaseAuth.getInstance();
         firebaseUser = auth.getCurrentUser();
